@@ -15,6 +15,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            max-width: 100%;
         }
         
         body {
@@ -24,13 +25,18 @@
             background: #0f0f1e;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
         
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
+            width: 1200px;
             margin: 0 auto;
             background: #0f0f1e;
-            padding: 50px;
+            padding: 40px;
+            overflow-x: hidden;
+            border-left: 5px solid red;
+            border-right: 5px solid red;
         }
         
         .header {
@@ -86,7 +92,7 @@
         
         .toc {
             background: rgba(138, 43, 226, 0.1);
-            padding: 25px;
+            
             border-radius: 10px;
             margin: 30px 0;
             border-left: 4px solid #8a2be2;
@@ -144,15 +150,17 @@
         
         .key-metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
             margin: 30px 0;
+            max-width: 100%;
+            overflow-x: auto;
         }
         
         .metric-card {
             background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
             color: white;
-            padding: 25px;
+            
             border-radius: 12px;
             text-align: center;
             border: 2px solid #8a2be2;
@@ -196,11 +204,13 @@
         
         table {
             width: 100%;
+            max-width: 100%;
             border-collapse: collapse;
             margin: 25px 0;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            table-layout: fixed;
         }
         
         thead {
@@ -216,6 +226,7 @@
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            word-wrap: break-word;
         }
         
         td {
@@ -223,6 +234,8 @@
             border-bottom: 1px solid rgba(138, 43, 226, 0.2);
             color: #e0e0e0;
             font-size: 14px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         tbody tr {
@@ -288,7 +301,7 @@
         .risk-section {
             background: rgba(244, 67, 54, 0.1);
             border-left: 4px solid #f44336;
-            padding: 25px;
+            
             margin: 25px 0;
             border-radius: 8px;
         }
@@ -314,6 +327,7 @@
         }
         
         .chart-container {
+            max-width: 100%;
             margin: 35px 0;
             padding: 40px 30px;
             background: rgba(20, 20, 50, 0.5);
@@ -381,7 +395,7 @@
             align-items: center;
             gap: 50px;
             flex-wrap: wrap;
-            padding: 20px;
+            
         }
         
         .pie-visual {
@@ -470,15 +484,19 @@
         
         .comparison-table {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
+            grid-template-columns: 1fr 1fr; max-width: 100%; overflow-x: auto;
+            gap: 15px;
             margin: 25px 0;
         }
         
         .comparison-card {
             background: rgba(138, 43, 226, 0.1);
-            padding: 25px;
+            padding: 20px;
             border-radius: 12px;
+            border: 2px solid #8a2be2;
+            max-width: 100%;
+            overflow: hidden;
+        }
             border: 2px solid #8a2be2;
         }
         
@@ -595,14 +613,14 @@
         
         .summary-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr; max-width: 100%; overflow-x: auto;
             gap: 25px;
             margin-top: 20px;
         }
         
         .summary-item {
             background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
+            
             border-radius: 8px;
             border-left: 4px solid #00d4ff;
         }
@@ -656,6 +674,38 @@
             font-size: 18px;
             font-weight: 300;
             opacity: 0.9;
+        
+        /* NUCLEAR WIDTH FIX */
+        html, body { width: 100%; max-width: 100%; overflow-x: hidden !important; margin: 0; padding: 0; }
+        body { background: #0f0f1e; }
+        .container { 
+            width: 900px !important; 
+            max-width: 900px !important; 
+            margin: 0 auto !important; 
+            padding: 40px !important; 
+            box-sizing: border-box !important; 
+        }
+        .container * { max-width: 100% !important; box-sizing: border-box !important; }
+        
+        /* AGGRESSIVE CHILD CONSTRAINTS */
+        .container > * {
+            max-width: 820px !important;
+        }
+        .container table {
+            width: 100% !important;
+            max-width: 820px !important;
+            table-layout: fixed !important;
+        }
+        .container .comparison-table,
+        .container .key-metrics,
+        .container .summary-grid {
+            max-width: 820px !important;
+            width: 100% !important;
+        }
+        .container td,
+        .container th {
+            word-break: break-word !important;
+        }
         }
     </style>
 </head>
@@ -675,127 +725,121 @@
         
         <div class="page-break"></div>
         
-        <div class="chart-container" style="background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%); border: 2px solid #8a2be2;">
+        <div class="chart-container" style="background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%); border: 2px solid #8a2be2; ">
             <h2 style="text-align: center; color: #00d4ff; margin-top: 0; border: none; padding: 0;">One-Page Investment Summary</h2>
             
-            <div class="key-metrics" style="margin: 30px 0;">
-                <div class="metric-card">
-                    <div class="label">Trading Volume (30 Days)</div>
-                    <div class="value">$185M</div>
-                    <div class="label">Processed on Platform</div>
+            <!-- HERO BANNER (Smaller, No Emoji) -->
+            <div style="background: linear-gradient(135deg, rgba(40, 40, 80, 0.9) 0%, rgba(30, 30, 60, 0.9) 100%); border: 2px solid #4caf50; border-radius: 16px; padding: 15px; margin-bottom: 35px; text-align: center; box-shadow: 0 10px 40px rgba(76, 175, 80, 0.4);">
+                <h2 style="color: #4caf50; font-size: 32px; margin: 0 0 20px 0; font-weight: 900; letter-spacing: 1px; border: none; padding: 0; text-align: center;">PROVEN REVENUE GENERATION — NOT PROJECTIONS</h2>
+                <p style="font-size: 20px; line-height: 1.6; color: #ffffff; margin: 15px 0; text-align: center; font-weight: 600;">$47,340 in actual revenue generated from 11 paying users in just weeks of testing.</p>
+                <p style="font-size: 16px; line-height: 1.6; color: #b0b0b0; margin: 0; text-align: center;">This places Mariah in the top 1% of seed-stage companies with validated monetization.</p>
+            </div>
+            
+            <!-- 4-CARD METRICS (Smaller) -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; max-width: 100%; overflow-x: auto; gap: 8px; margin-bottom: 40px;">
+                <!-- Card 1: Active Paying Users -->
+                <div style="background: linear-gradient(135deg, rgba(60, 50, 120, 0.6) 0%, rgba(40, 40, 80, 0.6) 100%); border: 2px solid #8a2be2; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 8px 25px rgba(138, 43, 226, 0.3);">
+                    <div style="font-size: 12px; color: #b0b0b0; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">ACTIVE PAYING USERS</div>
+                    <div style="font-size: 56px; font-weight: 900; color: #00d4ff; margin: 15px 0;">11</div>
+                    <div style="font-size: 12px; color: #b0b0b0; text-transform: uppercase; letter-spacing: 2px;">REAL REVENUE VALIDATION</div>
                 </div>
-                <div class="metric-card">
-                    <div class="label">Actual Revenue Generated</div>
-                    <div class="value">$47.3K</div>
-                    <div class="label">In Just Weeks</div>
+                
+                <!-- Card 2: Win Rate -->
+                <div style="background: linear-gradient(135deg, rgba(60, 50, 120, 0.6) 0%, rgba(40, 40, 80, 0.6) 100%); border: 2px solid #8a2be2; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 8px 25px rgba(138, 43, 226, 0.3);">
+                    <div style="font-size: 12px; color: #b0b0b0; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">WIN RATE</div>
+                    <div style="font-size: 56px; font-weight: 900; color: #00d4ff; margin: 15px 0;">70-75%</div>
+                    <div style="font-size: 12px; color: #b0b0b0; text-transform: uppercase; letter-spacing: 2px;">CONSISTENT PERFORMANCE</div>
                 </div>
-                <div class="metric-card">
-                    <div class="label">Active Paying Users</div>
-                    <div class="value">11</div>
-                    <div class="label">Real Revenue Validation</div>
+                
+                <!-- Card 3: Daily Returns -->
+                <div style="background: linear-gradient(135deg, rgba(60, 50, 120, 0.6) 0%, rgba(40, 40, 80, 0.6) 100%); border: 2px solid #8a2be2; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 8px 25px rgba(138, 43, 226, 0.3);">
+                    <div style="font-size: 12px; color: #b0b0b0; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">DAILY RETURNS</div>
+                    <div style="font-size: 56px; font-weight: 900; color: #00d4ff; margin: 15px 0;">2%+</div>
+                    <div style="font-size: 12px; color: #b0b0b0; text-transform: uppercase; letter-spacing: 2px;">PER DAY AVERAGE</div>
                 </div>
-                <div class="metric-card">
-                    <div class="label">Revenue Per User</div>
-                    <div class="value">$4,303</div>
-                    <div class="label">In Testing Phase</div>
+                
+                <!-- Card 4: Status - PROFITABLE (Green) -->
+                <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.3) 0%, rgba(40, 120, 80, 0.3) 100%); border: 3px solid #4caf50; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);">
+                    <div style="font-size: 12px; color: #b0b0b0; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">STATUS</div>
+                    <div style="text-align: center; color: #00d4ff; margin-top: 0; border: none; padding: 0;">✅</div>
+                    <div style="text-align: center; color: #00d4ff; margin-top: 0; border: none; padding: 0;">PROFITABLE</div>
+                    <div style="font-size: 12px; color: #b0b0b0; text-transform: uppercase; letter-spacing: 2px;">11 USERS > 6 USER BREAKEVEN</div>
                 </div>
             </div>
             
-            <div class="key-metrics" style="margin: 30px 0;">
-                <div class="metric-card">
-                    <div class="label">Total Fees Processed</div>
-                    <div class="value">$67.6K</div>
-                    <div class="label">Platform + Exchange Split</div>
-                </div>
-                <div class="metric-card">
-                    <div class="label">Win Rate</div>
-                    <div class="value">70-75%</div>
-                    <div class="label">Consistent Performance</div>
-                </div>
-                <div class="metric-card">
-                    <div class="label">Daily Returns</div>
-                    <div class="value">2%+</div>
-                    <div class="label">Per Day Average</div>
-                </div>
-                <div class="metric-card">
-                    <div class="label">Breakeven Point</div>
-                    <div class="value">6 Users</div>
-                    <div class="label">Already Have 11!</div>
-                </div>
-            </div>
-            
-            <table>
-                <thead>
+            <!-- REVENUE TABLE (Image 1 Bottom Section) -->
+            <table style="margin: 40px 0;">
+                <thead style="background: linear-gradient(135deg, #8a2be2 0%, #6a1bb2 100%);">
                     <tr>
-                        <th>Category</th>
-                        <th>Key Metric</th>
-                        <th>Status/Target</th>
+                        <th style="font-size: 14px; ">CATEGORY</th>
+                        <th style="font-size: 14px; ">KEY METRIC</th>
+                        <th style="font-size: 14px; ">STATUS/TARGET</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>Market Opportunity</strong></td>
-                        <td>$3 Trillion Crypto Market</td>
-                        <td>95% of traders lose money; Mariah fixes this</td>
+                    <tr style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.25) 0%, rgba(40, 120, 80, 0.25) 100%) !important; border-left: 5px solid #4caf50 !important;">
+                        <td style=""><div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 24px;">✅</span><strong style="font-size: 16px; color: #4caf50;">PROVEN REVENUE</strong></div></td>
+                        <td style=" font-size: 18px; font-weight: 700; color: #4caf50;">$47,340 Actual Revenue Generated</td>
+                        <td style=" font-size: 16px; font-weight: 700; color: #4caf50;">$4,303 per user in weeks — Not projected, PROVEN</td>
                     </tr>
                     <tr>
-                        <td><strong>Product Differentiation</strong></td>
-                        <td>13+ AI Agents + Voice Interface + Automated Trading</td>
-                        <td>Only AI ecosystem combining all three capabilities</td>
+                        <td style=""><strong>Market Opportunity</strong></td>
+                        <td style="">$3 Trillion Crypto Market</td>
+                        <td style="">95% of traders lose money; Mariah fixes this</td>
                     </tr>
                     <tr>
-                        <td><strong>Proven Traction</strong></td>
-                        <td>$185M Trading Volume + $47.3K Revenue (11 Users)</td>
-                        <td>70-75% win rate, 2%+ daily returns, $4,303/user revenue</td>
+                        <td style=""><strong>Product Differentiation</strong></td>
+                        <td style="">13+ AI Agents + Voice + Automated Trading</td>
+                        <td style="">Only AI ecosystem combining all three</td>
                     </tr>
                     <tr>
-                        <td><strong>Revenue Validation</strong></td>
-                        <td>$47,340 Actual Revenue in Weeks (Not Projected)</td>
-                        <td>Proven monetization with paying users - rare for seed stage</td>
+                        <td style=""><strong>Proven Traction</strong></td>
+                        <td style="">$185M Volume + 11 Paying Users</td>
+                        <td style="">70-75% win rate, 2%+ daily returns, 100% retention</td>
+                    </tr>
+                    <tr style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.25) 0%, rgba(40, 120, 80, 0.25) 100%) !important; border-left: 5px solid #4caf50 !important;">
+                        <td style=""><div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 24px;">✅</span><strong style="font-size: 16px; color: #4caf50;">MONETIZATION VALIDATED</strong></div></td>
+                        <td style=" font-size: 18px; font-weight: 700; color: #4caf50;">Dual Revenue Streams Active</td>
+                        <td style=" font-size: 16px; font-weight: 700; color: #4caf50;">Performance fees + Exchange commissions working</td>
                     </tr>
                     <tr>
-                        <td><strong>Revenue Model</strong></td>
-                        <td>Performance Fees + Exchange Commissions</td>
-                        <td>$4,303/user in weeks; validated dual revenue stream model</td>
+                        <td style=""><strong>Unit Economics</strong></td>
+                        <td style="">Already Profitable</td>
+                        <td style="">11 users > 6 user breakeven, costs covered</td>
                     </tr>
                     <tr>
-                        <td><strong>Unit Economics</strong></td>
-                        <td>Already Profitable (11 Users > 6 User Breakeven)</td>
-                        <td>$8,500 monthly costs covered by current revenue</td>
+                        <td style=""><strong>Valuation</strong></td>
+                        <td style="">Post-Money: $8-10M (Phase 1)</td>
+                        <td style="">24-Month Target: $60-75M at 10,000 users</td>
                     </tr>
                     <tr>
-                        <td><strong>Valuation</strong></td>
-                        <td>Post-Money: $8-10M (Phase 1)</td>
-                        <td>24-Month Target: $60-75M at 10,000 active accounts</td>
+                        <td style=""><strong>Funding Ask</strong></td>
+                        <td style="">$1.25M Phase 1</td>
+                        <td style="">Scale proven model — not proving concept</td>
                     </tr>
                     <tr>
-                        <td><strong>Funding Ask</strong></td>
-                        <td>$1.25M Phase 1</td>
-                        <td>Scale proven model - not proving concept</td>
+                        <td style=""><strong>Global Compliance</strong></td>
+                        <td style="">Multi-Jurisdiction Strategy</td>
+                        <td style="">8 countries in progress (USA, UAE, India, Brazil+)</td>
                     </tr>
-                    <tr>
-                        <td><strong>B2B Opportunity</strong></td>
-                        <td>Exchange Partnerships</td>
-                        <td>3x trading volume, +40% retention, 60% premium conversion</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Global Compliance</strong></td>
-                        <td>Multi-Jurisdiction Strategy</td>
-                        <td>USA, UAE, India, Brazil, Colombia, Indonesia, Philippines, Portugal</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Competitive Moat</strong></td>
-                        <td>No Direct Competitor + Real Revenue</td>
-                        <td>First to market with proven monetization ($47K in weeks)</td>
+                    <tr style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.25) 0%, rgba(40, 120, 80, 0.25) 100%) !important; border-left: 5px solid #4caf50 !important;">
+                        <td style=""><div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 24px;">✅</span><strong style="font-size: 16px; color: #4caf50;">COMPETITIVE MOAT</strong></div></td>
+                        <td style=" font-size: 18px; font-weight: 700; color: #4caf50;">No Direct Competitor + Revenue</td>
+                        <td style=" font-size: 16px; font-weight: 700; color: #4caf50;">First to market with $47K actual revenue proof</td>
                     </tr>
                 </tbody>
             </table>
             
-            <div style="background: rgba(138, 43, 226, 0.3); padding: 25px; border-radius: 8px; margin-top: 30px; text-align: center;">
-                <h3 style="color: #00d4ff; margin-top: 0;">Investment Thesis</h3>
-                <p style="font-size: 16px; line-height: 1.8; text-align: center;">Mariah AI is uniquely positioned to capture the $3 trillion cryptocurrency trading market by solving the fundamental problem that causes 95% of traders to lose money. With proven traction ($180M in trading volume), institutional-grade AI technology, and a dual B2B/B2C revenue model, Mariah offers investors exposure to both the retail trading revolution and the exchange infrastructure opportunity. The platform's capital-efficient model (breakeven at 6 users), strong unit economics ($1,641/user/month), and clear path to $60-75M valuation within 24 months make this a compelling early-stage investment in the convergence of AI and financial technology.</p>
+            <!-- INVESTMENT THESIS -->
+            <div style="background: rgba(138, 43, 226, 0.3); padding: 35px; border-radius: 12px; margin-top: 40px; text-align: center;">
+                <h3 style="color: #00d4ff; margin-top: 0; font-size: 24px;">Investment Thesis</h3>
+                <p style="font-size: 16px; line-height: 1.8; text-align: center; color: #ffffff;">Mariah AI is uniquely positioned to capture the $3 trillion cryptocurrency trading market by solving the fundamental problem that causes 95% of traders to lose money. <strong style="color: #4caf50;">With $47,340 in actual revenue already generated from just 11 users in weeks,</strong> Mariah has validated both product-market fit and monetization in ways that 99% of seed-stage companies cannot demonstrate. Combined with institutional-grade AI technology (70-75% win rate), dual B2B/B2C revenue model, and capital-efficient operations (already profitable), Mariah offers investors exposure to a proven revenue-generating platform with clear path to $60-75M valuation within 24 months. <strong style="color: #4caf50;">This is not an investment in potential — this is an investment in scaling proven revenue.</strong></p>
             </div>
         </div>
+        
+        <div class="page-break"></div>
+        
+        
         
         <div class="page-break"></div>
         
@@ -893,7 +937,7 @@
         
         <h3>Advisory Board & Strategic Partners</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Advisor Name</th>
@@ -936,7 +980,7 @@
         
         <h3>Hiring Roadmap (Post-Funding)</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Role</th>
@@ -981,36 +1025,35 @@
         
         <h2 id="section2">2. Current Traction & Proof of Concept</h2>
         
-        <div class="callout success">
-            <strong>De-Risking the Investment:</strong> Mariah has moved beyond theory to demonstrate real-world performance with live trading capital.
+        <!-- IMAGE 2: REVENUE VALIDATION NARRATIVE -->
+        <div class="callout success" style="background: linear-gradient(135deg, rgba(40, 80, 60, 0.4) 0%, rgba(30, 60, 50, 0.4) 100%); border-left-color: #4caf50; border-left-width: 4px; padding: 30px; text-align: center;">
+            <div style="text-align: center; color: #00d4ff; margin-top: 0; border: none; padding: 0;">🚀</div>
+            <h3 style="color: #4caf50; font-size: 26px; margin: 0 0 25px 0; font-weight: 900;">ACTUAL REVENUE VALIDATION — TOP 1% OF SEED COMPANIES</h3>
+            
+            <div style="text-align: left;">
+                <p style="margin-bottom: 12px;">
+                    <strong>Most seed-stage startups:</strong> <span style="color: #ff6b6b;">Zero revenue, only projections and promises</span>
+                </p>
+                <p style="margin-bottom: 25px;">
+                    <strong>Mariah (MX1):</strong> <span style="color: #4caf50; font-weight: 700;">$47,340 in actual revenue from 11 paying users in weeks</span>
+                </p>
+                
+                <div style="border-top: 2px solid rgba(76, 175, 80, 0.3); padding-top: 20px; text-align: center;">
+                    <p style="margin: 0;">
+                        This demonstrates proven monetization, validated product-market fit, and de-risked investment opportunity. Investors are not betting on <em>"will this make money?"</em> — they're seeing <strong style="color: #4caf50;">"this ALREADY makes money."</strong>
+                    </p>
+                </div>
+            </div>
         </div>
         
-        <div class="key-metrics">
-            <div class="metric-card">
-                <div class="label">Total Trading Volume</div>
-                <div class="value">$180M</div>
-                <div class="label">30-Day Period</div>
-            </div>
-            <div class="metric-card">
-                <div class="label">Active Users (Beta)</div>
-                <div class="value">5</div>
-                <div class="label">Early Adopters</div>
-            </div>
-            <div class="metric-card">
-                <div class="label">Win Rate</div>
-                <div class="value">70-75%</div>
-                <div class="label">Consistent Performance</div>
-            </div>
-            <div class="metric-card">
-                <div class="label">Daily Returns</div>
-                <div class="value">2%+</div>
-                <div class="label">Average Per Day</div>
-            </div>
+        <div class="callout info">
+            <strong>De-Risking the Investment:</strong> Mariah has moved beyond theory to demonstrate real-world performance with live trading capital on the MX1 platform <strong>AND</strong> proven revenue generation. We're not asking investors to validate our business model — <strong style="color: #4caf50;">our 11 paying users already did that for us.</strong>
+        </div>
         </div>
         
         <h3>Traction Breakdown</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Metric</th>
@@ -1020,14 +1063,34 @@
             </thead>
             <tbody>
                 <tr>
+                    <td><strong>Actual Revenue Generated</strong></td>
+                    <td>$47,340 USDT</td>
+                    <td>Real revenue in weeks - extremely rare for seed stage. Proves users will pay and business model works.</td>
+                </tr>
+                <tr>
+                    <td><strong>Total Fees Processed</strong></td>
+                    <td>$67,633 USDT</td>
+                    <td>Total fees generated by platform, split between Mariah and exchange partners. Validates dual revenue model.</td>
+                </tr>
+                <tr>
                     <td><strong>Trading Volume (30 Days)</strong></td>
-                    <td>$180,000,000</td>
-                    <td>Demonstrates institutional-scale execution capability with only 5 users. Extrapolated to 100 users = $3.6B monthly volume.</td>
+                    <td>$185,386,802 USDT</td>
+                    <td>Demonstrates institutional-scale execution capability. Extrapolated to 100 users = $1.6B monthly volume.</td>
+                </tr>
+                <tr>
+                    <td><strong>Active Paying Users</strong></td>
+                    <td>11 paying customers</td>
+                    <td>Not free beta testers - real customers paying real money. De-risks monetization assumption.</td>
+                </tr>
+                <tr>
+                    <td><strong>Revenue Per User</strong></td>
+                    <td>$4,303 per user (in weeks)</td>
+                    <td>Extrapolated annually: $112K+ per user. Exceptional LTV potential.</td>
                 </tr>
                 <tr>
                     <td><strong>Average Volume Per User</strong></td>
-                    <td>$36M per user over 30 days</td>
-                    <td>$1.2M daily volume per user indicates high engagement and trust in automated system.</td>
+                    <td>$16.8M per user over 30 days</td>
+                    <td>$560K daily volume per user indicates high engagement and trust in automated system.</td>
                 </tr>
                 <tr>
                     <td><strong>Win Rate</strong></td>
@@ -1040,14 +1103,14 @@
                     <td>Compounds to 60%+ monthly returns (before fees). Validates performance fee revenue model.</td>
                 </tr>
                 <tr>
-                    <td><strong>Trades Executed</strong></td>
-                    <td>[Insert number if available]</td>
-                    <td>High frequency demonstrates automation reliability and execution infrastructure stability.</td>
+                    <td><strong>Profitability Status</strong></td>
+                    <td>Already profitable (11 users > 6 breakeven)</td>
+                    <td>Platform covers $8.5K monthly operating costs with current revenue. Growth is profitable from day 1.</td>
                 </tr>
                 <tr>
                     <td><strong>User Retention</strong></td>
-                    <td>100% (5/5 active users continue)</td>
-                    <td>Early signal of product-market fit; users trust system with significant capital.</td>
+                    <td>100% retention maintained</td>
+                    <td>All 11 paying users continue using platform - strong product-market fit signal.</td>
                 </tr>
                 <tr>
                     <td><strong>System Uptime</strong></td>
@@ -1057,16 +1120,22 @@
             </tbody>
         </table>
         
+        <div class="callout success">
+            <strong>Revenue Validation - Rare for Seed Stage:</strong> Most seed-stage companies have 0 revenue and ask investors to bet on future monetization. Mariah has generated $47,340 in actual revenue with just 11 paying users in a few weeks of testing. This proves the business model works, users will pay, and the platform can scale profitably. At current revenue per user rates ($4,303), reaching 1,000 users would generate $4.3M in revenue - making this a rare pre-revenue-validated investment opportunity.
+        </div>
+        
         <h3>Key Learnings from Beta Phase</h3>
         
         <div class="comparison-table">
             <div class="comparison-card">
                 <h4>What's Working</h4>
                 <ul>
+                    <li><strong>Revenue Generation:</strong> $47,340 in actual revenue proves monetization works - users happily pay for AI trading performance</li>
                     <li><strong>AI Ensemble Accuracy:</strong> 13-agent system achieving 70-75% win rate validates core technology thesis</li>
-                    <li><strong>Automated Execution:</strong> Users comfortable with fully automated trading at scale ($36M per user)</li>
+                    <li><strong>Automated Execution:</strong> Users comfortable with fully automated trading at scale ($16.8M per user)</li>
                     <li><strong>Risk Management:</strong> No major drawdowns or system failures despite high-volume trading</li>
-                    <li><strong>User Trust:</strong> 100% retention indicates strong product-market fit</li>
+                    <li><strong>User Trust & Retention:</strong> 100% retention with paying customers indicates strong product-market fit</li>
+                    <li><strong>Profitability:</strong> Platform already profitable with 11 users (exceeds 6-user breakeven threshold)</li>
                 </ul>
             </div>
             
@@ -1093,7 +1162,7 @@
         
         <h3>Path to Next Milestones</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Milestone</th>
@@ -1140,7 +1209,7 @@
         <p>Powered by Mariah is the umbrella brand that connects all ventures — AI trading, analytics, dashboard, and token platforms — under one unified technology engine. It signifies that every system is built on Mariah's intelligence — the AI core that powers data, logic, and decision-making.</p>
         
         <h3>Ecosystem Breakdown</h3>
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Layer</th>
@@ -1200,7 +1269,7 @@
         
         <h3>Competitive Matrix</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Feature / Capability</th>
@@ -1355,7 +1424,7 @@
         
         <h3>Mariah's Unique Moat & Defensibility</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Moat Type</th>
@@ -1512,7 +1581,7 @@
             </div>
         </div>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Component</th>
@@ -1562,7 +1631,7 @@
         <h2 id="section7">7. Data Feeds & Market Access</h2>
         <p>The platform integrates Bybit, Binance, Glassnode, LunarCrush, and CryptoPanic APIs. Annual combined feed cost ≈ $7,400, licensed for enterprise use.</p>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Source</th>
@@ -1612,7 +1681,7 @@
         <h2 id="section8">8. Revenue Model & Profitability</h2>
         <p>Each user averages $25 profit/day. Mariah earns from a 10% performance fee, 70% of 1.6% Futures fee (1.12%), and 40% of 0.1% Spot fee (0.04%).</p>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Component</th>
@@ -1656,7 +1725,7 @@
         <h2 id="section9">9. Trading Volume & Fee Structure</h2>
         <p>To generate the above commission revenue, users must maintain the following trading volume:</p>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Parameter</th>
@@ -1740,7 +1809,7 @@
             </div>
         </div>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Parameter</th>
@@ -1783,7 +1852,7 @@
         
         <h3>3-Year Revenue Projections</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Metric</th>
@@ -1852,7 +1921,7 @@
         
         <h3>User Growth Model</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Quarter</th>
@@ -1926,7 +1995,7 @@
             </div>
         </div>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Metric</th>
@@ -1974,7 +2043,7 @@
         
         <h3>Revenue Mix Evolution</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Revenue Source</th>
@@ -2009,7 +2078,7 @@
         
         <h3>Scenario Analysis</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Scenario</th>
@@ -2042,7 +2111,7 @@
         
         <h3>Valuation Projection (24-Month)</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Valuation Method</th>
@@ -2117,7 +2186,7 @@
             </div>
         </div>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Revenue Stream</th>
@@ -2156,7 +2225,7 @@
             <strong>Multi-Jurisdiction Approach:</strong> Mariah is proactively engaging legal counsel in 8 target markets to ensure compliant launch and sustainable growth across diverse regulatory environments.
         </div>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Jurisdiction</th>
@@ -2289,7 +2358,7 @@
         
         <h2 id="section15">15. Performance Comparison: Current vs. Target</h2>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Metric</th>
@@ -2376,7 +2445,7 @@
         
         <h3>Milestone-Based Capital Deployment</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Milestone</th>
@@ -2469,7 +2538,7 @@
         
         <h3>Burn Rate Evolution</h3>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Period</th>
@@ -2658,7 +2727,7 @@
         
         <p>The cryptocurrency market faces fundamental challenges that cost traders billions annually:</p>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Market Problem</th>
@@ -2696,7 +2765,7 @@
         
         <div class="chart-container">
             <div class="chart-title">Core Platform Components</div>
-            <table>
+            <table style="width: 100%; table-layout: fixed;">
                 <thead>
                     <tr>
                         <th>Component</th>
@@ -2743,7 +2812,7 @@
             RSI Agent + MACD Agent + Whale Tracker + Macro Economics + ML Ensemble + Sentiment + Funding Rates + 6 More Agents = Institutional-Grade Signals
         </div>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Agent Category</th>
@@ -2839,7 +2908,7 @@
             </div>
         </div>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Benefit Category</th>
@@ -2950,7 +3019,7 @@
         
         <p>A three-pronged approach designed to create viral growth and establish market dominance:</p>
         
-        <table>
+        <table style="width: 100%; table-layout: fixed;">
             <thead>
                 <tr>
                     <th>Campaign</th>
@@ -3071,7 +3140,7 @@
         <h4>Interaction Example 1: Market Overview</h4>
         
         <div class="chart-container">
-            <div style="background: rgba(138, 43, 226, 0.15); padding: 20px; border-radius: 8px; border-left: 4px solid #00d4ff;">
+            <div style="background: rgba(138, 43, 226, 0.15);  border-radius: 8px; border-left: 4px solid #00d4ff;">
                 <p><strong>User:</strong> "Hey Mariah, what's the market looking like today?"</p>
                 <p><strong>Mariah Responds:</strong> "Good morning! I'm seeing bullish momentum in Bitcoin with strong support at $95,000. My AI agents have identified 3 high-probability setups. Would you like me to show you?"</p>
                 <p><strong>User:</strong> "Yes, show me the best one."</p>
@@ -3081,7 +3150,7 @@
         <h4>Interaction Example 2: Trade Explanation</h4>
         
         <div class="chart-container">
-            <div style="background: rgba(138, 43, 226, 0.15); padding: 20px; border-radius: 8px; border-left: 4px solid #00d4ff;">
+            <div style="background: rgba(138, 43, 226, 0.15);  border-radius: 8px; border-left: 4px solid #00d4ff;">
                 <p><strong>User:</strong> "Mariah, why did you choose this trade?"</p>
                 <p><strong>Mariah Responds:</strong> "This signal combines 5 confirmations: RSI divergence, whale accumulation at this level, positive funding rates, ML pattern recognition showing 73% historical win rate, and breaking above the 4-hour resistance. The risk-reward ratio is 1:3.5."</p>
                 <p><strong>Key Insight:</strong> "Every trade is tracked, analyzed, and optimized by AI. Voice-controlled trading, AI analysis, automated execution, and professional results. Imagine giving this power to every X-Change trader."</p>
