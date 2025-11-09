@@ -1,0 +1,3115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariah Platform — Investor Deck & Business Overview</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .page-break { page-break-before: always; }
+            .no-print { display: none; }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #0f0f1e;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #0f0f1e;
+            padding: 50px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #8a2be2;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+        }
+        
+        .logo-text {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #8a2be2 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            color: #00d4ff;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            color: #ffffff;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .toc {
+            background: rgba(138, 43, 226, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #8a2be2;
+        }
+        
+        .toc h3 {
+            margin-top: 0;
+            color: #00d4ff;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            padding: 8px 0;
+        }
+        
+        .toc a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .toc a:hover {
+            color: #8a2be2;
+            padding-left: 5px;
+        }
+        
+        .executive-summary {
+            background: linear-gradient(135deg, #8a2be2 0%, #00d4ff 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+        }
+        
+        .executive-summary h2 {
+            color: white;
+            border: none;
+            margin-top: 0;
+            padding: 0;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+        
+        .executive-summary p {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #8a2be2;
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.3);
+        }
+        
+        .metric-card .value {
+            font-size: 36px;
+            font-weight: 900;
+            margin: 12px 0;
+            color: #00d4ff;
+        }
+        
+        .metric-card .label {
+            font-size: 13px;
+            color: #b0b0b0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            color: #00d4ff;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 26px;
+            border-left: 4px solid #8a2be2;
+            padding-left: 20px;
+        }
+        
+        h3 {
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #8a2be2 0%, #6a1bb2 100%);
+            color: white;
+        }
+        
+        th {
+            padding: 16px 14px;
+            text-align: left;
+            font-weight: 700;
+            border: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        td {
+            padding: 14px;
+            border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+            color: #e0e0e0;
+            font-size: 14px;
+        }
+        
+        tbody tr {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        tbody tr:hover {
+            background: rgba(138, 43, 226, 0.15);
+            border-left: 3px solid #00d4ff;
+        }
+        
+        .total-row {
+            background: rgba(138, 43, 226, 0.3) !important;
+            font-weight: 700;
+            color: #00d4ff !important;
+        }
+        
+        .total-row td {
+            color: #00d4ff;
+            font-weight: 700;
+        }
+        
+        p {
+            margin: 15px 0;
+            text-align: justify;
+            color: #d0d0d0;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        .callout {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 18px;
+            margin: 25px 0;
+            border-radius: 8px;
+            color: #ffffff;
+        }
+        
+        .callout.success {
+            background: rgba(76, 175, 80, 0.1);
+            border-left-color: #4caf50;
+        }
+        
+        .callout.info {
+            background: rgba(0, 212, 255, 0.1);
+            border-left-color: #00d4ff;
+        }
+        
+        .callout.warning {
+            background: rgba(255, 152, 0, 0.1);
+            border-left-color: #ff9800;
+        }
+        
+        .callout strong {
+            color: #00d4ff;
+        }
+        
+        .risk-section {
+            background: rgba(244, 67, 54, 0.1);
+            border-left: 4px solid #f44336;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .risk-section h3 {
+            color: #ff6b6b;
+            margin-top: 0;
+        }
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 30px;
+            color: #d0d0d0;
+        }
+        
+        li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        
+        li strong {
+            color: #00d4ff;
+        }
+        
+        .chart-container {
+            margin: 35px 0;
+            padding: 40px 30px;
+            background: rgba(20, 20, 50, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+        
+        .chart-title {
+            text-align: center;
+            font-weight: 700;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .bar-label {
+            min-width: 200px;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 500;
+        }
+        
+        .bar-visual {
+            flex: 1;
+            height: 35px;
+            background: linear-gradient(90deg, #8a2be2 0%, #00d4ff 100%);
+            border-radius: 6px;
+            position: relative;
+            box-shadow: 0 3px 10px rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .bar-visual:hover {
+            transform: scaleX(1.02);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.5);
+        }
+        
+        .bar-value {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        
+        .pie-chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        
+        .pie-visual {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #8a2be2 0% 55%,
+                #00d4ff 55% 95%,
+                #48bb78 95% 100%
+            );
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+        }
+        
+        .pie-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .legend-color {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .legend-item strong {
+            color: #00d4ff;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 40px;
+            margin: 25px 0;
+            align-items: center;
+        }
+        
+        .timeline-duration {
+            min-width: 80px;
+            font-weight: 900;
+            color: #00d4ff;
+            text-align: left;
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+        
+        .timeline-bar {
+            flex: 1;
+            background: rgba(80, 50, 120, 0.4);
+            padding: 25px 30px;
+            border-radius: 10px;
+            border-left: 5px solid #8a2be2;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-bar:hover {
+            background: rgba(80, 50, 120, 0.6);
+            border-left-color: #00d4ff;
+            transform: translateX(3px);
+        }
+        
+        .timeline-label {
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-size: 19px;
+        }
+        
+        .timeline-bar div:not(.timeline-label) {
+            color: #a0a0b0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 25px 0;
+        }
+        
+        .comparison-card {
+            background: rgba(138, 43, 226, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #8a2be2;
+        }
+        
+        .comparison-card h4 {
+            margin-top: 0;
+            color: #00d4ff;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .comparison-card p {
+            margin: 12px 0;
+        }
+        
+        .comparison-card strong {
+            color: #00d4ff;
+        }
+        
+        hr {
+            margin: 50px 0;
+            border: none;
+            border-top: 2px solid rgba(138, 43, 226, 0.3);
+        }
+        
+        .footer-info {
+            text-align: center;
+            color: #808080;
+            font-size: 12px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(138, 43, 226, 0.3);
+        }
+        
+        .footer-info p {
+            text-align: center;
+            margin: 8px 0;
+        }
+        
+        .footer-info strong {
+            color: #00d4ff;
+        }
+        
+        .grid-container {
+            margin-bottom: 30px;
+        }
+        
+        .grid-header {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr 1fr;
+            gap: 15px;
+            background: linear-gradient(135deg, #8a2be2 0%, #6a1bb2 100%);
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .grid-row {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr 1fr;
+            gap: 15px;
+            padding: 25px 20px;
+            background: rgba(20, 20, 40, 0.6);
+            border-left: 3px solid #00d4ff;
+            transition: all 0.3s ease;
+            margin-bottom: 2px;
+        }
+        
+        .grid-row:hover {
+            background: rgba(138, 43, 226, 0.2);
+            border-left-color: #8a2be2;
+            transform: translateX(3px);
+        }
+        
+        .function-title {
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .function-desc {
+            font-size: 13px;
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+        
+        .cost {
+            font-size: 22px;
+            font-weight: 900;
+            color: #00d4ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .timeline-col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .timeline-badge {
+            background: linear-gradient(135deg, #8a2be2, #00d4ff);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .summary-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #00d4ff;
+        }
+        
+        .summary-label {
+            font-size: 13px;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .summary-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+        
+        .summary-box {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(0, 212, 255, 0.15) 100%);
+            border: 2px solid #8a2be2;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .total-box {
+            background: linear-gradient(135deg, #8a2be2 0%, #00d4ff 100%);
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+        }
+        
+        .total-label {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .total-amount {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        
+        .total-duration {
+            font-size: 18px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-text">MARIAH AI</div>
+            <div class="tagline">POWERED BY MARIAH — DARK TECH EDITION</div>
+            <h1>Investor Deck & Business Overview</h1>
+            <div class="subtitle">AI-Powered Cryptocurrency Trading Platform | Comprehensive Investment Proposal</div>
+        </div>
+        
+        <div class="executive-summary">
+            <h2>Executive Summary</h2>
+            <p>Mariah is an AI-driven cryptocurrency trading platform leveraging a 13-agent ensemble to execute trades with 45-second latency (targeting &lt;1s by Q2 2026). Mariah AI's Phase 1 valuation framework is modeled on a blended multiple approach, combining early-stage SaaS and AI-FinTech comparables. Based on the projected user growth curve and $1.25M Phase 1 capitalization, the platform is positioned for an initial post-money valuation range of $8 – $10 million. Scaling to 10,000 active trading accounts at current profit-per-user metrics yields a $60 – $75 million valuation potential within 24 months, driven by AI performance fee revenue, exchange commission splits, and technology licensing streams. The valuation uplift is supported by a capital-efficient architecture, high-margin recurring revenues, and multi-exchange expansion capability.</p>
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <div class="chart-container" style="background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%); border: 2px solid #8a2be2;">
+            <h2 style="text-align: center; color: #00d4ff; margin-top: 0; border: none; padding: 0;">One-Page Investment Summary</h2>
+            
+            <div class="key-metrics" style="margin: 30px 0;">
+                <div class="metric-card">
+                    <div class="label">Trading Volume (30 Days)</div>
+                    <div class="value">$185M</div>
+                    <div class="label">Processed on Platform</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Actual Revenue Generated</div>
+                    <div class="value">$47.3K</div>
+                    <div class="label">In Just Weeks</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Active Paying Users</div>
+                    <div class="value">11</div>
+                    <div class="label">Real Revenue Validation</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Revenue Per User</div>
+                    <div class="value">$4,303</div>
+                    <div class="label">In Testing Phase</div>
+                </div>
+            </div>
+            
+            <div class="key-metrics" style="margin: 30px 0;">
+                <div class="metric-card">
+                    <div class="label">Total Fees Processed</div>
+                    <div class="value">$67.6K</div>
+                    <div class="label">Platform + Exchange Split</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Win Rate</div>
+                    <div class="value">70-75%</div>
+                    <div class="label">Consistent Performance</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Daily Returns</div>
+                    <div class="value">2%+</div>
+                    <div class="label">Per Day Average</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Breakeven Point</div>
+                    <div class="value">6 Users</div>
+                    <div class="label">Already Have 11!</div>
+                </div>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Key Metric</th>
+                        <th>Status/Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Market Opportunity</strong></td>
+                        <td>$3 Trillion Crypto Market</td>
+                        <td>95% of traders lose money; Mariah fixes this</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Product Differentiation</strong></td>
+                        <td>13+ AI Agents + Voice Interface + Automated Trading</td>
+                        <td>Only AI ecosystem combining all three capabilities</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proven Traction</strong></td>
+                        <td>$185M Trading Volume + $47.3K Revenue (11 Users)</td>
+                        <td>70-75% win rate, 2%+ daily returns, $4,303/user revenue</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Revenue Validation</strong></td>
+                        <td>$47,340 Actual Revenue in Weeks (Not Projected)</td>
+                        <td>Proven monetization with paying users - rare for seed stage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Revenue Model</strong></td>
+                        <td>Performance Fees + Exchange Commissions</td>
+                        <td>$4,303/user in weeks; validated dual revenue stream model</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Unit Economics</strong></td>
+                        <td>Already Profitable (11 Users > 6 User Breakeven)</td>
+                        <td>$8,500 monthly costs covered by current revenue</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Valuation</strong></td>
+                        <td>Post-Money: $8-10M (Phase 1)</td>
+                        <td>24-Month Target: $60-75M at 10,000 active accounts</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Funding Ask</strong></td>
+                        <td>$1.25M Phase 1</td>
+                        <td>Scale proven model - not proving concept</td>
+                    </tr>
+                    <tr>
+                        <td><strong>B2B Opportunity</strong></td>
+                        <td>Exchange Partnerships</td>
+                        <td>3x trading volume, +40% retention, 60% premium conversion</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Global Compliance</strong></td>
+                        <td>Multi-Jurisdiction Strategy</td>
+                        <td>USA, UAE, India, Brazil, Colombia, Indonesia, Philippines, Portugal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Competitive Moat</strong></td>
+                        <td>No Direct Competitor + Real Revenue</td>
+                        <td>First to market with proven monetization ($47K in weeks)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="background: rgba(138, 43, 226, 0.3); padding: 25px; border-radius: 8px; margin-top: 30px; text-align: center;">
+                <h3 style="color: #00d4ff; margin-top: 0;">Investment Thesis</h3>
+                <p style="font-size: 16px; line-height: 1.8; text-align: center;">Mariah AI is uniquely positioned to capture the $3 trillion cryptocurrency trading market by solving the fundamental problem that causes 95% of traders to lose money. With proven traction ($180M in trading volume), institutional-grade AI technology, and a dual B2B/B2C revenue model, Mariah offers investors exposure to both the retail trading revolution and the exchange infrastructure opportunity. The platform's capital-efficient model (breakeven at 6 users), strong unit economics ($1,641/user/month), and clear path to $60-75M valuation within 24 months make this a compelling early-stage investment in the convergence of AI and financial technology.</p>
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <div class="key-metrics">
+            <div class="metric-card">
+                <div class="label">Breakeven Point</div>
+                <div class="value">6</div>
+                <div class="label">Active Profitable Users</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Revenue Per User</div>
+                <div class="value">$54.70</div>
+                <div class="label">Daily Average</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Monthly Operating Cost</div>
+                <div class="value">$8.5K</div>
+                <div class="label">Fully Loaded</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Execution Latency</div>
+                <div class="value">45s</div>
+                <div class="label">Current (&lt;1s Target)</div>
+            </div>
+        </div>
+        
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#executive-onepage">One-Page Investment Summary</a></li>
+                <li><a href="#section1">1. Team & Leadership</a></li>
+                <li><a href="#section2">2. Current Traction & Proof of Concept</a></li>
+                <li><a href="#section3">3. Brand Architecture Overview</a></li>
+                <li><a href="#section4">4. Competitive Landscape & Market Positioning</a></li>
+                <li><a href="#section5">5. Platform Architecture & Execution</a></li>
+                <li><a href="#section6">6. Operational Cost Model</a></li>
+                <li><a href="#section7">7. Data Feeds & Market Access</a></li>
+                <li><a href="#section8">8. Revenue Model & Profitability</a></li>
+                <li><a href="#section9">9. Trading Volume & Fee Structure</a></li>
+                <li><a href="#section10">10. Settlement Policy – Performance Fee</a></li>
+                <li><a href="#section11">11. Financial Viability & Breakeven Analysis</a></li>
+                <li><a href="#section12">12. Financial Projections & Growth Model (3-Year)</a></li>
+                <li><a href="#section13">13. Revenue Mix & Strategic Positioning</a></li>
+                <li><a href="#section14">14. Key Assumptions, Risk Factors & Regulatory Compliance</a></li>
+                <li><a href="#section15">15. Performance Comparison: Current vs. Target</a></li>
+                <li><a href="#section16">16. Phase 1 Funding Grid & Milestone-Based Deployment</a></li>
+                <li><a href="#appendix-a">Appendix A: Partnership Proposals for Exchanges & Users</a></li>
+            </ul>
+        </div>
+        
+        <h2 id="section1">1. Team & Leadership</h2>
+        
+        <div class="callout info">
+            <strong>Investment Principle:</strong> Investors invest in people first, product second. This section demonstrates the team's capability to execute on Mariah's ambitious vision.
+        </div>
+        
+        <h3>Founding Team</h3>
+        
+        <div class="comparison-table">
+            <div class="comparison-card">
+                <h4>[Founder Name] — Founder & CEO</h4>
+                <p><strong>Background:</strong></p>
+                <p>[Insert founder background: previous companies, years of experience in trading/AI/fintech, notable achievements, education]</p>
+                
+                <p><strong>Why This Founder for This Company:</strong></p>
+                <ul>
+                    <li>[Unique insight into the problem - personal trading experience?]</li>
+                    <li>[Technical expertise - AI/ML background, trading algorithms?]</li>
+                    <li>[Domain knowledge - years in crypto/fintech?]</li>
+                    <li>[Entrepreneurial track record - previous exits, company building?]</li>
+                </ul>
+                
+                <p><strong>Vision:</strong></p>
+                <p>[Founder's vision for Mariah - democratizing institutional-grade trading intelligence, making AI accessible to retail traders, building the future of automated trading, etc.]</p>
+            </div>
+            
+            <div class="comparison-card">
+                <h4>Key Team Members</h4>
+                <p><strong>[CTO/Lead Engineer Name] — Chief Technology Officer</strong></p>
+                <p>[Background in AI/ML, previous companies, technical expertise]</p>
+                
+                <p><strong>[Additional Team Member] — [Role]</strong></p>
+                <p>[Background and expertise]</p>
+                
+                <p><strong>Team Composition:</strong></p>
+                <ul>
+                    <li>AI/ML Engineers: [Number]</li>
+                    <li>Backend/Infrastructure: [Number]</li>
+                    <li>Frontend/UI: [Number]</li>
+                    <li>Data Scientists: [Number]</li>
+                    <li>Trading/Finance Experts: [Number]</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Advisory Board & Strategic Partners</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Advisor Name</th>
+                    <th>Expertise</th>
+                    <th>Background</th>
+                    <th>Value to Mariah</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[Advisor 1]</td>
+                    <td>AI/Machine Learning</td>
+                    <td>[Previous role at major tech company, academic credentials]</td>
+                    <td>Guides AI architecture and model optimization</td>
+                </tr>
+                <tr>
+                    <td>[Advisor 2]</td>
+                    <td>Cryptocurrency Trading</td>
+                    <td>[Former hedge fund trader, crypto exchange executive]</td>
+                    <td>Market strategy and institutional partnership development</td>
+                </tr>
+                <tr>
+                    <td>[Advisor 3]</td>
+                    <td>Regulatory/Compliance</td>
+                    <td>[Former SEC, CFTC, or FinCEN experience]</td>
+                    <td>Global compliance strategy and licensing navigation</td>
+                </tr>
+                <tr>
+                    <td>[Advisor 4]</td>
+                    <td>Fintech Scaling</td>
+                    <td>[Scaled previous fintech startup to $XXM ARR]</td>
+                    <td>Go-to-market strategy and operational excellence</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout success">
+            <strong>Team Strength:</strong> [Insert key team differentiator - e.g., "Combined 50+ years of experience in AI, trading, and fintech" or "Previously built and exited companies with $XXM in value" or "Deep relationships with top-tier exchanges and institutional traders"]
+        </div>
+        
+        <h3>Hiring Roadmap (Post-Funding)</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Timeline</th>
+                    <th>Priority</th>
+                    <th>Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Senior ML Engineer</td>
+                    <td>Month 1-2</td>
+                    <td>Critical</td>
+                    <td>Accelerate model optimization and &lt;1s latency target</td>
+                </tr>
+                <tr>
+                    <td>Head of Partnerships</td>
+                    <td>Month 2-3</td>
+                    <td>High</td>
+                    <td>Scale exchange integrations and B2B revenue</td>
+                </tr>
+                <tr>
+                    <td>Compliance Officer</td>
+                    <td>Month 2-3</td>
+                    <td>Critical</td>
+                    <td>Navigate multi-jurisdiction regulatory requirements</td>
+                </tr>
+                <tr>
+                    <td>Head of Growth/Marketing</td>
+                    <td>Month 3-4</td>
+                    <td>High</td>
+                    <td>Execute GTM strategy and user acquisition campaigns</td>
+                </tr>
+                <tr>
+                    <td>DevOps Engineer</td>
+                    <td>Month 3-4</td>
+                    <td>Medium</td>
+                    <td>Ensure infrastructure scales to 10,000+ users</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2 id="section2">2. Current Traction & Proof of Concept</h2>
+        
+        <div class="callout success">
+            <strong>De-Risking the Investment:</strong> Mariah has moved beyond theory to demonstrate real-world performance with live trading capital.
+        </div>
+        
+        <div class="key-metrics">
+            <div class="metric-card">
+                <div class="label">Total Trading Volume</div>
+                <div class="value">$180M</div>
+                <div class="label">30-Day Period</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Active Users (Beta)</div>
+                <div class="value">5</div>
+                <div class="label">Early Adopters</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Win Rate</div>
+                <div class="value">70-75%</div>
+                <div class="label">Consistent Performance</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Daily Returns</div>
+                <div class="value">2%+</div>
+                <div class="label">Average Per Day</div>
+            </div>
+        </div>
+        
+        <h3>Traction Breakdown</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Performance</th>
+                    <th>Significance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Trading Volume (30 Days)</strong></td>
+                    <td>$180,000,000</td>
+                    <td>Demonstrates institutional-scale execution capability with only 5 users. Extrapolated to 100 users = $3.6B monthly volume.</td>
+                </tr>
+                <tr>
+                    <td><strong>Average Volume Per User</strong></td>
+                    <td>$36M per user over 30 days</td>
+                    <td>$1.2M daily volume per user indicates high engagement and trust in automated system.</td>
+                </tr>
+                <tr>
+                    <td><strong>Win Rate</strong></td>
+                    <td>70-75%</td>
+                    <td>Significantly exceeds industry standard (most retail traders: &lt;50%). Proves AI ensemble effectiveness.</td>
+                </tr>
+                <tr>
+                    <td><strong>Daily Returns</strong></td>
+                    <td>2%+ per day average</td>
+                    <td>Compounds to 60%+ monthly returns (before fees). Validates performance fee revenue model.</td>
+                </tr>
+                <tr>
+                    <td><strong>Trades Executed</strong></td>
+                    <td>[Insert number if available]</td>
+                    <td>High frequency demonstrates automation reliability and execution infrastructure stability.</td>
+                </tr>
+                <tr>
+                    <td><strong>User Retention</strong></td>
+                    <td>100% (5/5 active users continue)</td>
+                    <td>Early signal of product-market fit; users trust system with significant capital.</td>
+                </tr>
+                <tr>
+                    <td><strong>System Uptime</strong></td>
+                    <td>[Insert if available, e.g., 99.9%]</td>
+                    <td>Critical for institutional credibility and exchange partnership discussions.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Key Learnings from Beta Phase</h3>
+        
+        <div class="comparison-table">
+            <div class="comparison-card">
+                <h4>What's Working</h4>
+                <ul>
+                    <li><strong>AI Ensemble Accuracy:</strong> 13-agent system achieving 70-75% win rate validates core technology thesis</li>
+                    <li><strong>Automated Execution:</strong> Users comfortable with fully automated trading at scale ($36M per user)</li>
+                    <li><strong>Risk Management:</strong> No major drawdowns or system failures despite high-volume trading</li>
+                    <li><strong>User Trust:</strong> 100% retention indicates strong product-market fit</li>
+                </ul>
+            </div>
+            
+            <div class="comparison-card">
+                <h4>Areas for Optimization</h4>
+                <ul>
+                    <li><strong>Latency Reduction:</strong> Current 45s execution time → targeting &lt;1s for arbitrage opportunities</li>
+                    <li><strong>Scalability Testing:</strong> 5 users → need infrastructure validation at 100+ concurrent users</li>
+                    <li><strong>User Onboarding:</strong> Streamline KYC and account setup process for mass market</li>
+                    <li><strong>Exchange Partnerships:</strong> Secure official integrations for commission split revenue activation</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>User Testimonials & Case Studies</h3>
+        
+        <div class="callout info">
+            <strong>[Beta User 1]:</strong> "[Insert testimonial about experience with Mariah, performance results, ease of use, confidence in automated trading, etc.]"
+        </div>
+        
+        <div class="callout info">
+            <strong>[Beta User 2]:</strong> "[Insert testimonial highlighting specific feature, win rate improvement, time saved, emotional benefits of automated trading, etc.]"
+        </div>
+        
+        <h3>Path to Next Milestones</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Milestone</th>
+                    <th>Metric</th>
+                    <th>Timeline</th>
+                    <th>Capital Required</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pilot Program Launch</td>
+                    <td>100 users, 3x volume validation</td>
+                    <td>Month 4 (post-funding)</td>
+                    <td>$300K (included in Phase 1)</td>
+                </tr>
+                <tr>
+                    <td>First Exchange Partnership</td>
+                    <td>Official integration + commission revenue activated</td>
+                    <td>Month 5-6</td>
+                    <td>$250K (included in Phase 1)</td>
+                </tr>
+                <tr>
+                    <td>1,000 Active Users</td>
+                    <td>$3.6B monthly volume, $1.6M MRR</td>
+                    <td>Month 12</td>
+                    <td>Phase 2 funding</td>
+                </tr>
+                <tr>
+                    <td>Multi-Jurisdiction Launch</td>
+                    <td>USA, UAE, India, Brazil live</td>
+                    <td>Month 18</td>
+                    <td>Phase 2 funding</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2 id="section3">3. Brand Architecture Overview</h2>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <img src="64595477-514A-4421-A575-DD23AFC0557C.PNG" alt="MX1 - Powered by Mariah" style="max-width: 400px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);">
+        </div>
+        
+        <h3>Definition</h3>
+        <p>Powered by Mariah is the umbrella brand that connects all ventures — AI trading, analytics, dashboard, and token platforms — under one unified technology engine. It signifies that every system is built on Mariah's intelligence — the AI core that powers data, logic, and decision-making.</p>
+        
+        <h3>Ecosystem Breakdown</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Layer</th>
+                    <th>Description</th>
+                    <th>Example Brand</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Core AI Engine</td>
+                    <td>The brain — Mariah AI herself (multi-agent, RL, predictive intelligence).</td>
+                    <td>Mariah</td>
+                </tr>
+                <tr>
+                    <td>Trading Platform</td>
+                    <td>AI-driven exchange and user interface for execution.</td>
+                    <td>MX1 — Mariah Exchange One</td>
+                </tr>
+                <tr>
+                    <td>Tokens & Assets</td>
+                    <td>Utility, staking, and ecosystem currency.</td>
+                    <td>MX1 Token, $MARIAH</td>
+                </tr>
+                <tr>
+                    <td>Analytics Layer</td>
+                    <td>Smart dashboards, signals, sentiment & on-chain tracking.</td>
+                    <td>Mariah Dashboard</td>
+                </tr>
+                <tr>
+                    <td>Brand Ecosystem</td>
+                    <td>Global creative and financial identity.</td>
+                    <td>Powered by Mariah™</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>In Practice</h3>
+        <p>When presenting products or sub-brands, each sits under the master identity. For example:</p>
+        
+        <div class="callout info">
+            <strong>MX1 — Powered by Mariah</strong><br><br>
+            This shows that the Mariah AI engine drives all predictive modeling, automation, and intelligence inside the ecosystem.
+        </div>
+        
+        <h3>Legal / Branding Use</h3>
+        <ul>
+            <li><strong>Parent Trademark:</strong> Acts as the parent trademark for all sub-brands.</li>
+            <li><strong>Trademark Filing:</strong> Recommended in Classes 9, 36, and 42 (technology, AI, and financial services).</li>
+            <li><strong>Sub-Brands:</strong> MX1, Mariah AI, and Mariah Labs operate under the Powered by Mariah umbrella.</li>
+        </ul>
+        
+        <h2 id="section4">4. Competitive Landscape & Market Positioning</h2>
+        
+        <div class="callout warning">
+            <strong>Market Insight:</strong> The crypto trading automation market is fragmented with single-purpose bots and copy-trading platforms. No competitor combines AI ensemble intelligence + voice interface + automated trading + exchange integration in one unified ecosystem.
+        </div>
+        
+        <h3>Competitive Matrix</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature / Capability</th>
+                    <th>Mariah AI</th>
+                    <th>3Commas</th>
+                    <th>Cryptohopper</th>
+                    <th>TradeSanta</th>
+                    <th>Copy Trading Platforms</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>AI-Powered Decision Making</strong></td>
+                    <td>✅ 13+ AI agents</td>
+                    <td>❌ Rule-based only</td>
+                    <td>⚠️ Basic ML</td>
+                    <td>❌ None</td>
+                    <td>❌ Follows humans</td>
+                </tr>
+                <tr>
+                    <td><strong>Voice Interface</strong></td>
+                    <td>✅ Natural language AI assistant</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td><strong>Automated Trading</strong></td>
+                    <td>✅ Fully automated</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅ Copy-based</td>
+                </tr>
+                <tr>
+                    <td><strong>Multi-Agent Ensemble</strong></td>
+                    <td>✅ 13+ specialized agents</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td><strong>Real-Time Sentiment Analysis</strong></td>
+                    <td>✅ LunarCrush + CryptoPanic</td>
+                    <td>❌</td>
+                    <td>⚠️ Limited</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td><strong>Whale Tracking</strong></td>
+                    <td>✅ Glassnode integration</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td><strong>Exchange Partnerships (B2B)</strong></td>
+                    <td>✅ Revenue-sharing model</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>⚠️ Platform-specific</td>
+                </tr>
+                <tr>
+                    <td><strong>Performance Analytics</strong></td>
+                    <td>✅ Institutional-grade</td>
+                    <td>⚠️ Basic</td>
+                    <td>⚠️ Basic</td>
+                    <td>⚠️ Basic</td>
+                    <td>⚠️ Basic</td>
+                </tr>
+                <tr>
+                    <td><strong>Proven Win Rate</strong></td>
+                    <td>✅ 70-75%</td>
+                    <td>⚠️ Varies by user config</td>
+                    <td>⚠️ Varies</td>
+                    <td>⚠️ Varies</td>
+                    <td>⚠️ Depends on trader</td>
+                </tr>
+                <tr>
+                    <td><strong>Execution Latency</strong></td>
+                    <td>45s (targeting &lt;1s)</td>
+                    <td>Variable</td>
+                    <td>Variable</td>
+                    <td>Variable</td>
+                    <td>Delayed (copy lag)</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Competitive Positioning: Why Mariah Wins</h3>
+        
+        <div class="comparison-table">
+            <div class="comparison-card">
+                <h4>vs. Traditional Trading Bots</h4>
+                <p><strong>Their Limitation:</strong> Rule-based systems with fixed parameters that can't adapt to changing market conditions.</p>
+                
+                <p><strong>Mariah's Advantage:</strong></p>
+                <ul>
+                    <li>AI learns and adapts in real-time</li>
+                    <li>13+ agents analyze multiple dimensions simultaneously</li>
+                    <li>Dynamic strategy switching based on market regime</li>
+                    <li>Proven 70-75% win rate vs industry average &lt;50%</li>
+                </ul>
+            </div>
+            
+            <div class="comparison-card">
+                <h4>vs. Copy Trading Platforms</h4>
+                <p><strong>Their Limitation:</strong> Follow human traders who make emotional decisions and have inconsistent performance.</p>
+                
+                <p><strong>Mariah's Advantage:</strong></p>
+                <ul>
+                    <li>Emotion-free systematic trading</li>
+                    <li>No dependency on individual trader performance</li>
+                    <li>Scalable without dilution (AI vs humans)</li>
+                    <li>Becomes THE lead trader exchanges partner with</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="comparison-table">
+            <div class="comparison-card">
+                <h4>vs. Exchange-Native Bots</h4>
+                <p><strong>Their Limitation:</strong> Locked into single exchange, basic functionality, no AI intelligence.</p>
+                
+                <p><strong>Mariah's Advantage:</strong></p>
+                <ul>
+                    <li>Multi-exchange architecture (Bybit, Binance, Bitunix)</li>
+                    <li>Unified intelligence across all platforms</li>
+                    <li>Voice interface unavailable on any exchange</li>
+                    <li>Partnership revenue model vs commodity feature</li>
+                </ul>
+            </div>
+            
+            <div class="comparison-card">
+                <h4>vs. Hedge Fund Tech</h4>
+                <p><strong>Their Limitation:</strong> Expensive ($10K+ monthly), complex setup, institutional-only access.</p>
+                
+                <p><strong>Mariah's Advantage:</strong></p>
+                <ul>
+                    <li>Retail pricing with institutional performance</li>
+                    <li>User-friendly interface (voice + visual)</li>
+                    <li>Democratizes access to AI trading</li>
+                    <li>Scalable to millions of users</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Mariah's Unique Moat & Defensibility</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Moat Type</th>
+                    <th>Description</th>
+                    <th>Defensibility</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Technology Moat</strong></td>
+                    <td>13+ AI agent ensemble with proprietary training data from $180M trading volume</td>
+                    <td>High - requires significant AI expertise and live trading data to replicate</td>
+                </tr>
+                <tr>
+                    <td><strong>Data Moat</strong></td>
+                    <td>Every trade improves the model. Network effects: more users = more data = better performance</td>
+                    <td>Increasing - compounds over time as user base grows</td>
+                </tr>
+                <tr>
+                    <td><strong>Integration Moat</strong></td>
+                    <td>First-mover advantage with exchange partnerships. Revenue-sharing agreements create switching costs</td>
+                    <td>Medium-High - exchanges won't integrate multiple AI bots with similar revenue splits</td>
+                </tr>
+                <tr>
+                    <td><strong>Brand Moat</strong></td>
+                    <td>"Mariah" personality creates emotional connection. "She's not just a bot, she's a lifestyle"</td>
+                    <td>Medium - difficult to replicate brand authenticity and community loyalty</td>
+                </tr>
+                <tr>
+                    <td><strong>Regulatory Moat</strong></td>
+                    <td>Multi-jurisdiction compliance (8 countries in progress). Licensing creates barriers to entry</td>
+                    <td>High - regulatory approval process is time-consuming and expensive</td>
+                </tr>
+                <tr>
+                    <td><strong>Performance Moat</strong></td>
+                    <td>Proven 70-75% win rate with $180M volume. Reputation compounds through word-of-mouth</td>
+                    <td>High - track record takes time to build and validate</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Market Entry Barriers for Competitors</h3>
+        
+        <ul>
+            <li><strong>Technical Complexity:</strong> Building 13+ coordinated AI agents requires deep ML expertise (6-12 months minimum)</li>
+            <li><strong>Capital Requirements:</strong> $1M+ needed for development, infrastructure, compliance, and go-to-market</li>
+            <li><strong>Live Trading Data:</strong> Cannot train models without real money trading data (chicken-and-egg problem)</li>
+            <li><strong>Exchange Relationships:</strong> Mariah's first-mover advantage with partnership discussions creates exclusivity</li>
+            <li><strong>Regulatory Approval:</strong> Multi-jurisdiction compliance takes 12-18 months and significant legal investment</li>
+            <li><strong>Brand Trust:</strong> Users won't risk capital with unproven systems. Mariah's $180M track record is insurmountable</li>
+        </ul>
+        
+        <div class="callout success">
+            <strong>Competitive Summary:</strong> Mariah occupies a unique position as the only platform combining AI ensemble intelligence, voice interaction, automated trading, and exchange partnerships. The combination of technology, data, regulatory, and brand moats creates a defensible competitive advantage that widens with scale.
+        </div>
+        
+        <h2 id="section5">5. Platform Architecture & Execution</h2>
+        <p>The Mariah AI trading engine currently executes a full prediction cycle in approximately 45 seconds across a 13-agent ensemble. Each agent handles specialized tasks such as technical signal extraction, behavioral analysis, and market microstructure inference.</p>
+        
+        <h3>Execution Timeline Breakdown</h3>
+        <div class="chart-container">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-duration">8s</div>
+                    <div class="timeline-bar">
+                        <div class="timeline-label">Data Aggregation</div>
+                        <div>Pulls OHLCV, order-book, sentiment & funding data</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-duration">6s</div>
+                    <div class="timeline-bar">
+                        <div class="timeline-label">Feature Engineering</div>
+                        <div>Computes 40+ indicators and normalized features</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-duration">15s</div>
+                    <div class="timeline-bar">
+                        <div class="timeline-label">AI Inference (13 Agents)</div>
+                        <div>Parallel agent inference via joblib process pool</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-duration">5s</div>
+                    <div class="timeline-bar">
+                        <div class="timeline-label">Bias & Fusion Layer</div>
+                        <div>Weight normalization and confidence voting</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-duration">4s</div>
+                    <div class="timeline-bar">
+                        <div class="timeline-label">Execution Layer</div>
+                        <div>Liquidity, spread, and fill probability validation</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-duration">3s</div>
+                    <div class="timeline-bar">
+                        <div class="timeline-label">Risk Layer</div>
+                        <div>Stop-loss ceiling and max-loss guardrails</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="callout info">
+            <strong>Acceleration Roadmap (Q2 2026 target &lt;1s):</strong> quantized ONNX runtime, GPU inference (A100), Ray-based distributed pipelines, and pruning redundant meta-agents. Arbitrage and risk layers operate predictively and asynchronously, mitigating latency impact.
+        </div>
+        
+        <h2 id="section6">6. Operational Cost Model</h2>
+        <p>Weekly GPU-based retraining averages $225 per cycle. Infrastructure is containerized with Kubernetes and Ray clusters for scalability.</p>
+        
+        <div class="chart-container">
+            <div class="chart-title">Monthly Operating Cost Breakdown ($8,500)</div>
+            <div class="bar-chart">
+                <div class="bar-item">
+                    <div class="bar-label">Compute (CPU + GPU)</div>
+                    <div class="bar-visual" style="width: 100%;">
+                        <span class="bar-value">$4,800 (56%)</span>
+                    </div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">APIs & Data Feeds</div>
+                    <div class="bar-visual" style="width: 25%;">
+                        <span class="bar-value">$1,200 (14%)</span>
+                    </div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">Model Retraining</div>
+                    <div class="bar-visual" style="width: 19%;">
+                        <span class="bar-value">$900 (11%)</span>
+                    </div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">Networking & Security</div>
+                    <div class="bar-visual" style="width: 15%;">
+                        <span class="bar-value">$700 (8%)</span>
+                    </div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">Storage & Databases</div>
+                    <div class="bar-visual" style="width: 13%;">
+                        <span class="bar-value">$600 (7%)</span>
+                    </div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">Monitoring</div>
+                    <div class="bar-visual" style="width: 6%;">
+                        <span class="bar-value">$300 (4%)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Monthly Cost (USD)</th>
+                    <th>% of Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Compute (CPU + GPU Nodes)</td>
+                    <td>$4,800</td>
+                    <td>56%</td>
+                </tr>
+                <tr>
+                    <td>Storage & Databases</td>
+                    <td>$600</td>
+                    <td>7%</td>
+                </tr>
+                <tr>
+                    <td>APIs & Data Feeds</td>
+                    <td>$1,200</td>
+                    <td>14%</td>
+                </tr>
+                <tr>
+                    <td>Model Retraining</td>
+                    <td>$900</td>
+                    <td>11%</td>
+                </tr>
+                <tr>
+                    <td>Networking & Security</td>
+                    <td>$700</td>
+                    <td>8%</td>
+                </tr>
+                <tr>
+                    <td>Monitoring</td>
+                    <td>$300</td>
+                    <td>4%</td>
+                </tr>
+                <tr class="total-row">
+                    <td>Total</td>
+                    <td>$8,500</td>
+                    <td>100%</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2 id="section7">7. Data Feeds & Market Access</h2>
+        <p>The platform integrates Bybit, Binance, Glassnode, LunarCrush, and CryptoPanic APIs. Annual combined feed cost ≈ $7,400, licensed for enterprise use.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Purpose</th>
+                    <th>Annual Cost</th>
+                    <th>% of Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Glassnode Pro</td>
+                    <td>On-chain metrics / whale flow</td>
+                    <td>$1,800</td>
+                    <td>24%</td>
+                </tr>
+                <tr>
+                    <td>LunarCrush Enterprise</td>
+                    <td>Social + sentiment NLP</td>
+                    <td>$2,400</td>
+                    <td>32%</td>
+                </tr>
+                <tr>
+                    <td>CryptoPanic Premium</td>
+                    <td>News + event alerts</td>
+                    <td>$1,200</td>
+                    <td>16%</td>
+                </tr>
+                <tr>
+                    <td>Historical OHLCV Data</td>
+                    <td>Backtesting datasets</td>
+                    <td>$2,000</td>
+                    <td>27%</td>
+                </tr>
+                <tr class="total-row">
+                    <td>Total</td>
+                    <td>—</td>
+                    <td>$7,400 / yr</td>
+                    <td>100%</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout success">
+            <strong>Data Feed Reliability:</strong> All data feeds are enterprise-grade with 99.9%+ uptime SLAs. Redundant API endpoints and caching mechanisms ensure continuous operation even during provider outages.
+        </div>
+        
+        <h2 id="section8">8. Revenue Model & Profitability</h2>
+        <p>Each user averages $25 profit/day. Mariah earns from a 10% performance fee, 70% of 1.6% Futures fee (1.12%), and 40% of 0.1% Spot fee (0.04%).</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Basis</th>
+                    <th>Value ($)</th>
+                    <th>% of Revenue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Performance Fee (10%)</td>
+                    <td>10% × $25</td>
+                    <td>$2.50</td>
+                    <td>4.6%</td>
+                </tr>
+                <tr>
+                    <td>Futures Split (70% of 1.6%)</td>
+                    <td>≈ $4,500/day × 1.12%</td>
+                    <td>$50.40</td>
+                    <td>92.1%</td>
+                </tr>
+                <tr>
+                    <td>Spot Split (40% of 0.1%)</td>
+                    <td>≈ $4,500/day × 0.04%</td>
+                    <td>$1.80</td>
+                    <td>3.3%</td>
+                </tr>
+                <tr class="total-row">
+                    <td>Total Estimated Daily Platform Revenue/User</td>
+                    <td>—</td>
+                    <td>$54.70</td>
+                    <td>100%</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout info">
+            <strong>Settlement Mechanism:</strong> Performance fees settle daily under a High-Water-Mark system; users pay only on new profits above their previous equity peak.
+        </div>
+        
+        <h2 id="section9">9. Trading Volume & Fee Structure</h2>
+        <p>To generate the above commission revenue, users must maintain the following trading volume:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Futures</th>
+                    <th>Spot</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Exchange Fee</td>
+                    <td>1.6%</td>
+                    <td>0.1%</td>
+                </tr>
+                <tr>
+                    <td>Platform Share</td>
+                    <td>70% → 1.12%</td>
+                    <td>40% → 0.04%</td>
+                </tr>
+                <tr>
+                    <td>Target Daily Platform Income/User</td>
+                    <td>$50–$55</td>
+                    <td>$2</td>
+                </tr>
+                <tr>
+                    <td>Required Trading Volume</td>
+                    <td>≈ $4,000–$4,500/day per user</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td>Trade Frequency</td>
+                    <td>12–15 trades/day</td>
+                    <td>Variable</td>
+                </tr>
+                <tr>
+                    <td>Average Position Size</td>
+                    <td>$300–$400</td>
+                    <td>$100–$200</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout warning">
+            <strong>Volume Assumptions:</strong> The required $4,000–$4,500 daily trading volume represents aggressive trading activity. Users employing 10x leverage can reduce nominal capital requirements to ~$400–$450/day, making this more achievable for retail traders.
+        </div>
+        
+        <h2 id="section10">10. Settlement Policy – Performance Fee</h2>
+        <p>The 10% performance fee is settled daily on realized profits and governed by a High-Water-Mark (HWM) ledger. This ensures fairness and aligns platform incentives with user success:</p>
+        
+        <ul>
+            <li><strong>High-Water-Mark Protection:</strong> Fees only apply to profits exceeding the user's previous equity peak</li>
+            <li><strong>Loss Recovery Requirement:</strong> After a drawdown, no fees are charged until losses are fully recovered</li>
+            <li><strong>Daily Settlement:</strong> Profits are calculated and fees deducted at the end of each trading day</li>
+            <li><strong>Transparency:</strong> Users receive detailed daily statements showing HWM calculations and fee breakdowns</li>
+        </ul>
+        
+        <h2 id="section11">11. Financial Viability & Breakeven Analysis</h2>
+        
+        <div class="comparison-table">
+            <div class="comparison-card">
+                <h4>Conservative Scenario</h4>
+                <p><strong>Assumptions:</strong></p>
+                <ul>
+                    <li>20% user inactivity rate</li>
+                    <li>Average $20/day profit per user</li>
+                    <li>80% volume achievement</li>
+                </ul>
+                <p><strong>Breakeven:</strong> ~10 users</p>
+                <p><strong>Monthly Revenue/User:</strong> ~$1,300</p>
+            </div>
+            
+            <div class="comparison-card">
+                <h4>Base Case Scenario</h4>
+                <p><strong>Assumptions:</strong></p>
+                <ul>
+                    <li>10% user inactivity rate</li>
+                    <li>Average $25/day profit per user</li>
+                    <li>100% volume achievement</li>
+                </ul>
+                <p><strong>Breakeven:</strong> ~6 users</p>
+                <p><strong>Monthly Revenue/User:</strong> ~$1,641</p>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Monthly Operating Cost</td>
+                    <td>$8,500</td>
+                </tr>
+                <tr>
+                    <td>Avg Revenue/User/Month (Base Case)</td>
+                    <td>$1,641</td>
+                </tr>
+                <tr>
+                    <td>Breakeven Point (Base Case)</td>
+                    <td>≈ 6 active profitable users</td>
+                </tr>
+                <tr>
+                    <td>Breakeven Point (Conservative)</td>
+                    <td>≈ 10 active profitable users</td>
+                </tr>
+                <tr>
+                    <td>Scalability Target</td>
+                    <td>10,000+ concurrent users</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout success">
+            <strong>Margin Improvement at Scale:</strong> GPU parallelization reduces marginal cost per user at scale. Beyond 100 users, infrastructure costs plateau while revenue scales linearly, expanding net profit margins from ~15% to 60%+.
+        </div>
+        
+        <h2 id="section12">12. Financial Projections & Growth Model (3-Year)</h2>
+        
+        <div class="callout info">
+            <strong>Projection Methodology:</strong> Based on proven unit economics ($1,641/user/month revenue, $8,500 monthly operating cost), validated traction ($180M volume with 5 users), and conservative user acquisition assumptions.
+        </div>
+        
+        <h3>3-Year Revenue Projections</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Year 1</th>
+                    <th>Year 2</th>
+                    <th>Year 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Active Users (End of Year)</strong></td>
+                    <td>1,000</td>
+                    <td>5,000</td>
+                    <td>15,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Average Monthly Revenue per User</strong></td>
+                    <td>$1,641</td>
+                    <td>$1,723 (+5% pricing power)</td>
+                    <td>$1,809 (+5% pricing power)</td>
+                </tr>
+                <tr>
+                    <td><strong>Monthly Recurring Revenue (MRR) - End of Year</strong></td>
+                    <td>$1.64M</td>
+                    <td>$8.62M</td>
+                    <td>$27.1M</td>
+                </tr>
+                <tr>
+                    <td><strong>Annual Recurring Revenue (ARR) - End of Year</strong></td>
+                    <td>$19.7M</td>
+                    <td>$103.4M</td>
+                    <td>$325.4M</td>
+                </tr>
+                <tr>
+                    <td><strong>Total Annual Revenue (Average)</strong></td>
+                    <td>$9.8M</td>
+                    <td>$61.5M</td>
+                    <td>$214.4M</td>
+                </tr>
+                <tr>
+                    <td><strong>Monthly Operating Costs</strong></td>
+                    <td>$85K (scales with users)</td>
+                    <td>$425K</td>
+                    <td>$1.28M</td>
+                </tr>
+                <tr>
+                    <td><strong>Annual Operating Costs</strong></td>
+                    <td>$1.0M</td>
+                    <td>$5.1M</td>
+                    <td>$15.3M</td>
+                </tr>
+                <tr>
+                    <td><strong>Gross Profit</strong></td>
+                    <td>$8.8M</td>
+                    <td>$56.4M</td>
+                    <td>$199.1M</td>
+                </tr>
+                <tr>
+                    <td><strong>Gross Margin</strong></td>
+                    <td>90%</td>
+                    <td>92%</td>
+                    <td>93%</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>User Growth Model</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Quarter</th>
+                    <th>New Users</th>
+                    <th>Cumulative Users</th>
+                    <th>Growth Driver</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Q1 (Pilot)</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>Pilot program launch (exchange partnerships)</td>
+                </tr>
+                <tr>
+                    <td>Q2</td>
+                    <td>150</td>
+                    <td>250</td>
+                    <td>First exchange integration + word-of-mouth</td>
+                </tr>
+                <tr>
+                    <td>Q3</td>
+                    <td>300</td>
+                    <td>550</td>
+                    <td>Marketing campaigns + influencer partnerships</td>
+                </tr>
+                <tr>
+                    <td>Q4</td>
+                    <td>450</td>
+                    <td>1,000</td>
+                    <td>Copy trading feature + viral growth</td>
+                </tr>
+                <tr>
+                    <td>Year 2</td>
+                    <td>4,000</td>
+                    <td>5,000</td>
+                    <td>Multi-exchange expansion + international markets</td>
+                </tr>
+                <tr>
+                    <td>Year 3</td>
+                    <td>10,000</td>
+                    <td>15,000</td>
+                    <td>Brand dominance + institutional partnerships</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Customer Acquisition Cost (CAC) & Lifetime Value (LTV) Analysis</h3>
+        
+        <div class="key-metrics">
+            <div class="metric-card">
+                <div class="label">Customer Acquisition Cost (CAC)</div>
+                <div class="value">$300</div>
+                <div class="label">Blended Average</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Lifetime Value (LTV)</div>
+                <div class="value">$19,692</div>
+                <div class="label">12-Month Average Retention</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">LTV:CAC Ratio</div>
+                <div class="value">65:1</div>
+                <div class="label">Exceptional Unit Economics</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Payback Period</div>
+                <div class="value">&lt;0.2</div>
+                <div class="label">Months to Breakeven</div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Calculation</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Average Revenue per User per Month</strong></td>
+                    <td>Performance fees + Exchange commissions</td>
+                    <td>$1,641</td>
+                </tr>
+                <tr>
+                    <td><strong>Average User Lifetime</strong></td>
+                    <td>Based on 240-day retention (8 months conservative, 12 months target)</td>
+                    <td>12 months</td>
+                </tr>
+                <tr>
+                    <td><strong>Lifetime Value (LTV)</strong></td>
+                    <td>$1,641 × 12 months</td>
+                    <td>$19,692</td>
+                </tr>
+                <tr>
+                    <td><strong>Customer Acquisition Cost (CAC)</strong></td>
+                    <td>Marketing spend / New users acquired</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td><strong>LTV:CAC Ratio</strong></td>
+                    <td>$19,692 / $300</td>
+                    <td>65.6:1</td>
+                </tr>
+                <tr>
+                    <td><strong>CAC Payback Period</strong></td>
+                    <td>$300 / $1,641 per month</td>
+                    <td>0.18 months (5.4 days)</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout success">
+            <strong>Exceptional Unit Economics:</strong> With a 65:1 LTV:CAC ratio (industry benchmark: 3:1 is considered good), Mariah demonstrates extraordinary profitability potential. The sub-month payback period means every marketing dollar returns 65x over the user lifetime.
+        </div>
+        
+        <h3>Revenue Mix Evolution</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Revenue Source</th>
+                    <th>Year 1</th>
+                    <th>Year 2</th>
+                    <th>Year 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Performance Fees (10%)</td>
+                    <td>55% ($5.4M)</td>
+                    <td>58% ($35.7M)</td>
+                    <td>62% ($132.9M)</td>
+                </tr>
+                <tr>
+                    <td>Exchange Commissions (70%/40%)</td>
+                    <td>40% ($3.9M)</td>
+                    <td>37% ($22.8M)</td>
+                    <td>33% ($70.8M)</td>
+                </tr>
+                <tr>
+                    <td>B2B Licensing & Data</td>
+                    <td>5% ($0.5M)</td>
+                    <td>5% ($3.1M)</td>
+                    <td>5% ($10.7M)</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p><strong>Strategic Observation:</strong> Performance fee revenue increases as percentage of total revenue over time, demonstrating shift toward alpha-based income and reduced dependence on exchange partnerships. This improves margin profile and company valuation multiple.</p>
+        
+        <h3>Scenario Analysis</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Year 3 Users</th>
+                    <th>Year 3 ARR</th>
+                    <th>Probability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Conservative</strong></td>
+                    <td>8,000</td>
+                    <td>$173.5M</td>
+                    <td>70%</td>
+                </tr>
+                <tr>
+                    <td><strong>Base Case</strong></td>
+                    <td>15,000</td>
+                    <td>$325.4M</td>
+                    <td>50%</td>
+                </tr>
+                <tr>
+                    <td><strong>Optimistic</strong></td>
+                    <td>25,000</td>
+                    <td>$542.3M</td>
+                    <td>20%</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Valuation Projection (24-Month)</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Valuation Method</th>
+                    <th>Multiple</th>
+                    <th>Calculation</th>
+                    <th>Valuation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ARR Multiple (SaaS)</td>
+                    <td>8-12x ARR</td>
+                    <td>$103.4M ARR × 10x</td>
+                    <td>$1.03B</td>
+                </tr>
+                <tr>
+                    <td>ARR Multiple (Conservative)</td>
+                    <td>6x ARR</td>
+                    <td>$103.4M ARR × 6x</td>
+                    <td>$620M</td>
+                </tr>
+                <tr>
+                    <td>Revenue Multiple (FinTech)</td>
+                    <td>10-15x Revenue</td>
+                    <td>$61.5M Revenue × 12x</td>
+                    <td>$738M</td>
+                </tr>
+                <tr>
+                    <td>User-Based (Per Active User)</td>
+                    <td>$10K-$15K per user</td>
+                    <td>5,000 users × $12K</td>
+                    <td>$60M</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout info">
+            <strong>Conservative 24-Month Valuation Target:</strong> $60-75M based on 5,000 active users and proven unit economics. This represents 6-7.5x return on initial $10M post-money valuation for seed investors.
+        </div>
+        
+        <h2 id="section13">13. Revenue Mix & Strategic Positioning</h2>
+        
+        <p>Mariah's revenue model balances performance-driven income with transactional revenue to ensure sustainable growth while maintaining focus on user profitability.</p>
+        
+        <div class="chart-container">
+            <div class="chart-title">Revenue Composition Forecast</div>
+            <div class="pie-chart">
+                <div class="pie-visual"></div>
+                <div class="pie-legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #8a2be2;"></div>
+                        <div>
+                            <strong>Performance Fee (10%)</strong><br>
+                            55% - Alpha-based income
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #00d4ff;"></div>
+                        <div>
+                            <strong>Exchange Commissions</strong><br>
+                            40% - Transaction revenue
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #48bb78;"></div>
+                        <div>
+                            <strong>Data/API/Licensing</strong><br>
+                            5% - B2B monetization
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Revenue Stream</th>
+                    <th>Share</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Performance Fee (10%)</td>
+                    <td>≈ 55%</td>
+                    <td>Core alpha-based income tied to user profits.</td>
+                </tr>
+                <tr>
+                    <td>Exchange Commission Splits (70%/40%)</td>
+                    <td>≈ 40%</td>
+                    <td>Transactional recurring revenue scaling with trade activity.</td>
+                </tr>
+                <tr>
+                    <td>Data / Licensing / API Access</td>
+                    <td>≈ 5%</td>
+                    <td>Future B2B monetization from Mariah analytics and data feeds.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout info">
+            <strong>Strategic Positioning:</strong> Balanced weighting ensures Mariah remains a performance-driven AI platform, not a brokerage affiliate. The roadmap aims to raise performance-fee weighting above 60% as autonomous reinforcement and sentiment models further improve profitability.
+        </div>
+        
+        <h2 id="section14">14. Key Assumptions, Risk Factors & Regulatory Compliance</h2>
+        
+        <h3>Regulatory & Compliance Strategy</h3>
+        
+        <div class="callout info">
+            <strong>Multi-Jurisdiction Approach:</strong> Mariah is proactively engaging legal counsel in 8 target markets to ensure compliant launch and sustainable growth across diverse regulatory environments.
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Jurisdiction</th>
+                    <th>Regulatory Body</th>
+                    <th>License/Registration Required</th>
+                    <th>Status</th>
+                    <th>Timeline</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>United States</strong></td>
+                    <td>SEC, CFTC, FinCEN</td>
+                    <td>MSB Registration, possible CFTC commodity trading advisor (CTA) registration</td>
+                    <td>Legal counsel engaged</td>
+                    <td>6-12 months</td>
+                </tr>
+                <tr>
+                    <td><strong>UAE</strong></td>
+                    <td>DFSA (Dubai), ADGM (Abu Dhabi)</td>
+                    <td>Financial Services Permission for automated trading</td>
+                    <td>Legal counsel engaged</td>
+                    <td>3-6 months</td>
+                </tr>
+                <tr>
+                    <td><strong>India</strong></td>
+                    <td>SEBI, RBI</td>
+                    <td>Compliance with crypto regulations (evolving framework)</td>
+                    <td>Legal counsel engaged</td>
+                    <td>6-9 months</td>
+                </tr>
+                <tr>
+                    <td><strong>Brazil</strong></td>
+                    <td>CVM (Securities Commission)</td>
+                    <td>Crypto trading service registration</td>
+                    <td>Legal counsel engaged</td>
+                    <td>4-8 months</td>
+                </tr>
+                <tr>
+                    <td><strong>Colombia</strong></td>
+                    <td>SFC (Financial Superintendence)</td>
+                    <td>Virtual asset service provider (VASP) license</td>
+                    <td>Legal counsel engaged</td>
+                    <td>6-9 months</td>
+                </tr>
+                <tr>
+                    <td><strong>Indonesia</strong></td>
+                    <td>BAPPEBTI, OJK</td>
+                    <td>Crypto asset trading registration</td>
+                    <td>Legal counsel engaged</td>
+                    <td>4-6 months</td>
+                </tr>
+                <tr>
+                    <td><strong>Philippines</strong></td>
+                    <td>BSP (Central Bank), SEC</td>
+                    <td>Virtual currency exchange registration</td>
+                    <td>Legal counsel engaged</td>
+                    <td>3-6 months</td>
+                </tr>
+                <tr>
+                    <td><strong>Portugal</strong></td>
+                    <td>CMVM, Banco de Portugal</td>
+                    <td>MiFID II compliance for automated trading</td>
+                    <td>Legal counsel engaged</td>
+                    <td>4-8 months</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Compliance Risk Mitigation Strategy</h3>
+        
+        <ul>
+            <li><strong>Domestic & International Legal Teams:</strong> Retained specialized counsel in each jurisdiction with crypto/fintech expertise</li>
+            <li><strong>Phased Geographic Rollout:</strong> Launch in most favorable jurisdictions first (UAE, Philippines, Portugal) while awaiting approval in complex markets (USA, India)</li>
+            <li><strong>KYC/AML Infrastructure:</strong> Implemented industry-standard identity verification and transaction monitoring systems</li>
+            <li><strong>Compliance-First Product Design:</strong> Built-in controls for jurisdictional restrictions, trade limits, and regulatory reporting</li>
+            <li><strong>Advisory Board:</strong> [To be added: Former regulators or compliance officers from target jurisdictions]</li>
+            <li><strong>Dedicated Compliance Officer:</strong> Priority hire in Month 2-3 post-funding to oversee multi-jurisdiction strategy</li>
+        </ul>
+        
+        <h3>Regulatory Risk Assessment</h3>
+        
+        <div class="risk-section">
+            <h3>High-Priority Regulatory Considerations</h3>
+            <ul>
+                <li><strong>Automated Trading Classification:</strong> Some jurisdictions may classify Mariah as investment advisor or CTA, requiring additional licensing</li>
+                <li><strong>Cross-Border Data Transfer:</strong> GDPR and local data protection laws may restrict user data flow between jurisdictions</li>
+                <li><strong>Performance Fee Structure:</strong> May be subject to investment management regulations in certain markets</li>
+                <li><strong>Exchange Partnership Commissions:</strong> Revenue-sharing with exchanges may trigger broker-dealer regulations</li>
+                <li><strong>Evolving Crypto Regulations:</strong> Rapid regulatory changes in target markets could impact business model</li>
+            </ul>
+        </div>
+        
+        <div class="callout warning">
+            <strong>Mitigation Approach:</strong> Mariah's strategy prioritizes regulatory compliance over speed-to-market. The Phase 1 funding includes $200K allocated for legal/compliance to ensure proper licensing before large-scale user acquisition.
+        </div>
+        
+        <div class="risk-section">
+            <h3>Critical Assumptions</h3>
+            <ul>
+                <li><strong>User Profitability:</strong> Model assumes consistent $25/day profit per user. Market volatility or strategy degradation could reduce this significantly.</li>
+                <li><strong>Trading Volume:</strong> Requires $4,000–$4,500 daily volume per user. Retail traders may struggle to maintain this without leverage.</li>
+                <li><strong>Active User Rate:</strong> Assumes 80–90% user activity. Higher churn or inactive accounts increase breakeven threshold.</li>
+                <li><strong>Exchange Relationships:</strong> Commission splits depend on maintaining partnerships with Bybit/Binance. Changes to fee structures or partnerships could impact 40% of revenue.</li>
+                <li><strong>AI Model Performance:</strong> Profitability depends on continued model accuracy. Market regime changes could require significant retraining.</li>
+            </ul>
+        </div>
+        
+        <div class="risk-section">
+            <h3>Risk Mitigation Strategies</h3>
+            <ul>
+                <li><strong>Diversified Revenue:</strong> 55/40/5 split reduces dependency on any single income source</li>
+                <li><strong>High-Water-Mark Protection:</strong> Aligns platform incentives with user success; no fees during drawdowns</li>
+                <li><strong>Weekly Model Retraining:</strong> $900/month budget ensures models adapt to changing market conditions</li>
+                <li><strong>Low Fixed Costs:</strong> Cloud infrastructure allows scaling costs with user growth</li>
+                <li><strong>Multiple Exchange Integration:</strong> Reduces single-point-of-failure risk for data and execution</li>
+            </ul>
+        </div>
+        
+        <div class="risk-section">
+            <h3>Key Operational Risks</h3>
+            <ul>
+                <li><strong>Regulatory Risk:</strong> Cryptocurrency trading regulations vary by jurisdiction and are evolving rapidly</li>
+                <li><strong>Market Risk:</strong> Extended bear markets or low volatility periods reduce trading opportunities and user profits</li>
+                <li><strong>Technical Risk:</strong> System downtime during high-volatility events could result in missed opportunities or losses</li>
+                <li><strong>Competitive Risk:</strong> Increasing number of AI trading platforms could compress margins and user acquisition costs</li>
+                <li><strong>Scalability Risk:</strong> 45-second latency may limit high-frequency strategies; GPU upgrade critical for competitiveness</li>
+            </ul>
+        </div>
+        
+        <h2 id="section15">15. Performance Comparison: Current vs. Target</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Current State</th>
+                    <th>Q2 2026 Target</th>
+                    <th>Improvement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Execution Latency</td>
+                    <td>45 seconds</td>
+                    <td>&lt;1 second</td>
+                    <td>45x faster</td>
+                </tr>
+                <tr>
+                    <td>Infrastructure</td>
+                    <td>CPU + Limited GPU</td>
+                    <td>A100 GPU Clusters</td>
+                    <td>10x throughput</td>
+                </tr>
+                <tr>
+                    <td>Concurrent Users</td>
+                    <td>~100 users</td>
+                    <td>10,000+ users</td>
+                    <td>100x scale</td>
+                </tr>
+                <tr>
+                    <td>AI Framework</td>
+                    <td>Joblib process pool</td>
+                    <td>Ray distributed + ONNX</td>
+                    <td>Optimized inference</td>
+                </tr>
+                <tr>
+                    <td>Agent Count</td>
+                    <td>13 agents</td>
+                    <td>8–10 agents (pruned)</td>
+                    <td>Leaner ensemble</td>
+                </tr>
+                <tr>
+                    <td>Cost per User</td>
+                    <td>~$85/month</td>
+                    <td>&lt;$5/month</td>
+                    <td>17x efficiency</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout success">
+            <strong>Technology Roadmap Impact:</strong> The Q2 2026 upgrades will transform Mariah from a medium-frequency trading platform to a near-real-time system, enabling access to higher-value arbitrage opportunities and significantly improving unit economics.
+        </div>
+        
+        <h2 id="section16">16. Phase 1 Funding Grid & Milestone-Based Deployment</h2>
+        <p>Launch to Live — Comprehensive Investment Overview with Capital Efficiency Milestones</p>
+        
+        <div class="callout success">
+            <strong>Capital Deployment Philosophy:</strong> Phase 1 funding ($1.25M) is structured around measurable milestones that de-risk the investment and validate product-market fit before scaling.
+        </div>
+        
+        <h3>Funding Allocation & Runway</h3>
+        
+        <div class="key-metrics">
+            <div class="metric-card">
+                <div class="label">Total Phase 1 Capital</div>
+                <div class="value">$1.25M</div>
+                <div class="label">Seed Round</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Runway</div>
+                <div class="value">12-15</div>
+                <div class="label">Months</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Monthly Burn Rate</div>
+                <div class="value">$85K</div>
+                <div class="label">Average (Months 1-4)</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Breakeven Target</div>
+                <div class="value">Month 8</div>
+                <div class="label">Revenue-Funded Growth</div>
+            </div>
+        </div>
+        
+        <h3>Milestone-Based Capital Deployment</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Milestone</th>
+                    <th>Capital Deployed</th>
+                    <th>Timeline</th>
+                    <th>Success Metrics</th>
+                    <th>Go/No-Go Decision</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Milestone 1: Foundation</strong></td>
+                    <td>$400K</td>
+                    <td>Months 1-2</td>
+                    <td>Core development complete, 2 engineers hired, compliance initiated</td>
+                    <td>Technical architecture validated</td>
+                </tr>
+                <tr>
+                    <td><strong>Milestone 2: Pilot Launch</strong></td>
+                    <td>$350K</td>
+                    <td>Months 3-4</td>
+                    <td>100 pilot users onboarded, $36M volume per user validated</td>
+                    <td>3x volume increase confirmed with pilot cohort</td>
+                </tr>
+                <tr>
+                    <td><strong>Milestone 3: Exchange Partnership</strong></td>
+                    <td>$250K</td>
+                    <td>Months 5-6</td>
+                    <td>First exchange integration live, commission revenue activated</td>
+                    <td>Revenue-sharing agreement generating $10K+ monthly</td>
+                </tr>
+                <tr>
+                    <td><strong>Milestone 4: Scale</strong></td>
+                    <td>$250K</td>
+                    <td>Months 7-12</td>
+                    <td>1,000 active users, $1.6M MRR, breakeven achieved</td>
+                    <td>Unit economics validated at scale, ready for Series A</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>What Each Milestone Unlocks</h3>
+        
+        <div class="comparison-table">
+            <div class="comparison-card">
+                <h4>Milestone 1: Foundation ($400K)</h4>
+                <p><strong>Deliverables:</strong></p>
+                <ul>
+                    <li>Core AI development ($50K - Function 1)</li>
+                    <li>13 AI agents refinement ($300K - Function 2)</li>
+                    <li>Platform infrastructure ($50K - Function 3 partial)</li>
+                </ul>
+                <p><strong>Validation:</strong> Technology de-risked, team in place, ready for users</p>
+            </div>
+            
+            <div class="comparison-card">
+                <h4>Milestone 2: Pilot ($350K)</h4>
+                <p><strong>Deliverables:</strong></p>
+                <ul>
+                    <li>Marketing launch ($150K)</li>
+                    <li>Operations & leadership ($100K)</li>
+                    <li>Platform completion ($100K)</li>
+                </ul>
+                <p><strong>Validation:</strong> Product-market fit confirmed with 100 users, traction metrics proven</p>
+            </div>
+        </div>
+        
+        <div class="comparison-table">
+            <div class="comparison-card">
+                <h4>Milestone 3: Partnership ($250K)</h4>
+                <p><strong>Deliverables:</strong></p>
+                <ul>
+                    <li>Exchange integration ($150K)</li>
+                    <li>Marketing expansion ($100K)</li>
+                </ul>
+                <p><strong>Validation:</strong> B2B revenue model activated, dual revenue streams operational</p>
+            </div>
+            
+            <div class="comparison-card">
+                <h4>Milestone 4: Scale ($250K)</h4>
+                <p><strong>Deliverables:</strong></p>
+                <ul>
+                    <li>User acquisition ($150K)</li>
+                    <li>Operations scale ($50K)</li>
+                    <li>Compliance completion ($50K)</li>
+                </ul>
+                <p><strong>Validation:</strong> Profitable at scale, ready for international expansion and Series A</p>
+            </div>
+        </div>
+        
+        <h3>Burn Rate Evolution</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>Monthly Burn</th>
+                    <th>Monthly Revenue</th>
+                    <th>Net Cash Flow</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Months 1-4 (Development)</td>
+                    <td>$85K</td>
+                    <td>$0</td>
+                    <td>-$340K</td>
+                </tr>
+                <tr>
+                    <td>Months 5-6 (Pilot)</td>
+                    <td>$95K</td>
+                    <td>$16K (100 users ramping)</td>
+                    <td>-$158K</td>
+                </tr>
+                <tr>
+                    <td>Months 7-8 (Partnership Launch)</td>
+                    <td>$105K</td>
+                    <td>$200K (250 users)</td>
+                    <td>+$190K</td>
+                </tr>
+                <tr>
+                    <td>Months 9-12 (Scale to Breakeven)</td>
+                    <td>$120K</td>
+                    <td>$820K (500-1,000 users)</td>
+                    <td>+$2.8M</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout success">
+            <strong>Path to Profitability:</strong> Mariah achieves operational breakeven by Month 8 and generates $2.8M in positive cash flow by Month 12, enabling revenue-funded growth without additional capital raise. Remaining Phase 1 capital becomes growth reserve.
+        </div>
+
+        <div class="section-title">Core Development Functions</div>
+        
+        <div class="grid-container">
+            <div class="grid-header">
+                <div>Function / Category</div>
+                <div>Estimated Cost (USD)</div>
+                <div>Timeline</div>
+            </div>
+            
+            <div class="grid-row">
+                <div>
+                    <div class="function-title">Function 1 — Price Prediction Model</div>
+                    <div class="function-desc">Core AI module that forecasts crypto prices using historical, technical, and sentiment data.</div>
+                </div>
+                <div class="cost">$50,000</div>
+                <div class="timeline-col"><span class="timeline-badge">1 Month</span></div>
+            </div>
+            
+            <div class="grid-row">
+                <div>
+                    <div class="function-title">Function 2 — 13 AI Agents</div>
+                    <div class="function-desc">Multi-agent intelligence network (RSI, MACD, Whale, Sentiment, ML Ensemble, etc.) for signal generation and adaptive strategy logic.</div>
+                </div>
+                <div class="cost">$300,000</div>
+                <div class="timeline-col"><span class="timeline-badge">2 Months</span></div>
+            </div>
+            
+            <div class="grid-row">
+                <div>
+                    <div class="function-title">Function 3 — AI Trading Platform</div>
+                    <div class="function-desc">Full trading ecosystem including execution engine, dashboard, risk control, user interface, and automation API integration.</div>
+                </div>
+                <div class="cost">$150,000</div>
+                <div class="timeline-col"><span class="timeline-badge">4 Months</span></div>
+            </div>
+        </div>
+
+        <div class="section-title">Operational & Market Infrastructure</div>
+        
+        <div class="grid-container">
+            <div class="grid-header">
+                <div>Function / Category</div>
+                <div>Estimated Cost (USD)</div>
+                <div>Timeline</div>
+            </div>
+            
+            <div class="grid-row">
+                <div>
+                    <div class="function-title">Marketing & Brand Launch</div>
+                    <div class="function-desc">Digital campaigns, influencer partnerships, media content, and launch events under the "Powered by Mariah" identity.</div>
+                </div>
+                <div class="cost">$300,000</div>
+                <div class="timeline-col"><span class="timeline-badge">2 Months</span></div>
+            </div>
+            
+            <div class="grid-row">
+                <div>
+                    <div class="function-title">Operations & Leadership</div>
+                    <div class="function-desc">Core management, engineering leadership, compliance setup, legal filings, and project oversight.</div>
+                </div>
+                <div class="cost">$200,000</div>
+                <div class="timeline-col"><span class="timeline-badge">4 Months</span></div>
+            </div>
+            
+            <div class="grid-row">
+                <div>
+                    <div class="function-title">Exchange Partnership & Trading Infrastructure</div>
+                    <div class="function-desc">Integration with partner exchanges (e.g., Bitunix/Bybit), trading volume incentives, API licenses, and partnership costs.</div>
+                </div>
+                <div class="cost">$250,000</div>
+                <div class="timeline-col"><span class="timeline-badge">3 Months</span></div>
+            </div>
+        </div>
+
+        <div class="summary-box">
+            <div class="section-title" style="margin-top: 0; border: none;">Phase 1 Financial Summary</div>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="summary-label">Development Total</div>
+                    <div class="summary-value">$500,000</div>
+                    <div class="function-desc" style="margin-top: 10px;">Functions 1–3 Combined</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Operational & Market Costs</div>
+                    <div class="summary-value">$750,000</div>
+                    <div class="function-desc" style="margin-top: 10px;">Marketing, Leadership, Exchange Partnerships</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="total-box">
+            <div class="total-label">💰 Total Funding Required — Phase 1</div>
+            <div class="total-amount">$1,250,000</div>
+            <div class="total-duration">⏱️ Total Estimated Duration: ≈ 4 Months (Parallel Execution)</div>
+        </div>
+
+        <h3>Phase 1 Deliverables</h3>
+        <ul>
+            <li><strong>Predictive AI Model:</strong> Advanced price forecasting engine using multi-source data integration (historical, technical, sentiment analysis)</li>
+            <li><strong>Full Multi-Agent Framework:</strong> 13 specialized AI agents working in concert for signal generation, risk assessment, and adaptive strategy execution</li>
+            <li><strong>Mariah Trading Dashboard + Execution Engine:</strong> Professional-grade interface with real-time analytics, automated execution, and risk management controls</li>
+            <li><strong>Brand Identity & Market Presence:</strong> Comprehensive marketing launch establishing "Powered by Mariah" as a premium AI trading brand</li>
+            <li><strong>Exchange Integration:</strong> Live trading infrastructure with tier-1 exchange partnerships (Bitunix/Bybit) and API connectivity</li>
+            <li><strong>Leadership & Compliance:</strong> Operational team structure with legal compliance framework and regulatory positioning</li>
+        </ul>
+
+        <h3>Investment Use Breakdown</h3>
+        <div class="summary-grid">
+            <div class="summary-item">
+                <div class="summary-label">Technology Development</div>
+                <div class="summary-value">40%</div>
+                <div class="function-desc" style="margin-top: 10px;">$500K — AI Core, Agents, Platform</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Marketing & Brand</div>
+                <div class="summary-value">24%</div>
+                <div class="function-desc" style="margin-top: 10px;">$300K — Launch Campaigns, Partnerships</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Exchange Infrastructure</div>
+                <div class="summary-value">20%</div>
+                <div class="function-desc" style="margin-top: 10px;">$250K — Integration, Liquidity, APIs</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Operations & Leadership</div>
+                <div class="summary-value">16%</div>
+                <div class="function-desc" style="margin-top: 10px;">$200K — Team, Compliance, Management</div>
+            </div>
+        </div>
+
+        <div class="callout info">
+            <strong>Investment Goal:</strong> Deliver a fully functional, AI-powered trading ecosystem ready for public launch. Phase 1 represents the complete foundation for a revenue-generating platform with institutional-grade technology and market-ready infrastructure.
+        </div>
+        
+        <hr>
+        
+        <h2 id="appendix-a">Appendix A: Partnership Proposals for Exchanges & Users</h2>
+        
+        <p>Mariah AI delivers a dual-value proposition: empowering cryptocurrency exchanges (B2B) with competitive differentiation and revenue growth, while providing individual traders (B2C) with institutional-grade AI trading intelligence at retail prices. The following materials present Mariah AI's comprehensive market positioning, partnership strategy, and user value proposition.</p>
+        
+        <h3>The $3 Trillion Crypto Market Problem</h3>
+        
+        <div class="callout warning">
+            <strong>"While Others Offer Tools, We Deliver Intelligence"</strong>
+        </div>
+        
+        <p>The cryptocurrency market faces fundamental challenges that cost traders billions annually:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Market Problem</th>
+                    <th>Impact</th>
+                    <th>Root Cause</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Trader Failure Rate</td>
+                    <td>95% of traders lose money</td>
+                    <td>Emotional decision-making and lack of systematic approach</td>
+                </tr>
+                <tr>
+                    <td>Emotional Trading Costs</td>
+                    <td>Billions in losses annually</td>
+                    <td>Fear and greed driving irrational decisions</td>
+                </tr>
+                <tr>
+                    <td>Bot Limitations</td>
+                    <td>Unable to adapt to market changes</td>
+                    <td>Basic algorithms with fixed parameters</td>
+                </tr>
+                <tr>
+                    <td>Copy Trading Failures</td>
+                    <td>Following human errors at scale</td>
+                    <td>Replicating emotional and biased trading decisions</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>What is Mariah: AI-Powered Trading Ecosystem</h3>
+        
+        <p>Mariah is a comprehensive AI trading platform that revolutionizes crypto trading through intelligent automation. Unlike basic trading bots, Mariah operates as a complete ecosystem featuring:</p>
+        
+        <div class="chart-container">
+            <div class="chart-title">Core Platform Components</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Description</th>
+                        <th>Unique Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>13+ Specialized AI Agents</td>
+                        <td>RSI, MACD, Whale Tracking, ML Ensemble, Funding Rate Analysis working in concert</td>
+                        <td>Multi-dimensional market analysis beyond single indicators</td>
+                    </tr>
+                    <tr>
+                        <td>Voice-Enabled AI Assistant</td>
+                        <td>Natural language interaction explaining trades and market conditions</td>
+                        <td>Democratizes professional trading knowledge for retail users</td>
+                    </tr>
+                    <tr>
+                        <td>Real-Time Execution</td>
+                        <td>Direct exchange API integration with automated risk management</td>
+                        <td>Institutional-speed execution with retail accessibility</td>
+                    </tr>
+                    <tr>
+                        <td>Professional Analytics</td>
+                        <td>PnL tracking, performance reports, daily summaries</td>
+                        <td>Hedge fund-grade reporting for every user</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-Strategy Intelligence</td>
+                        <td>Adapts between scalping, swing, momentum, and market regimes</td>
+                        <td>Dynamic strategy switching based on market conditions</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>The Tech Behind Mariah: AI Agent Orchestra</h3>
+        
+        <p>Mariah's intelligence stems from a sophisticated ensemble of 13+ specialized AI agents that work together to generate institutional-grade signals:</p>
+        
+        <div class="callout info">
+            <strong>AI Agent Orchestra Formula:</strong><br>
+            RSI Agent + MACD Agent + Whale Tracker + Macro Economics + ML Ensemble + Sentiment + Funding Rates + 6 More Agents = Institutional-Grade Signals
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Agent Category</th>
+                    <th>Agents</th>
+                    <th>Function</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Technical Analysis</td>
+                    <td>RSI Agent, MACD Agent, Pattern Recognition</td>
+                    <td>Identify overbought/oversold conditions and trend reversals</td>
+                </tr>
+                <tr>
+                    <td>Market Intelligence</td>
+                    <td>Whale Tracker, Funding Rate Analysis, Volume Analysis</td>
+                    <td>Track institutional movements and market positioning</td>
+                </tr>
+                <tr>
+                    <td>Predictive Models</td>
+                    <td>ML Ensemble, Pattern Recognition, Historical Correlation</td>
+                    <td>73%+ win rate on pattern-based predictions</td>
+                </tr>
+                <tr>
+                    <td>Market Sentiment</td>
+                    <td>Sentiment Agent, News Analysis, Social Signals</td>
+                    <td>Gauge market psychology and narrative shifts</td>
+                </tr>
+                <tr>
+                    <td>Macro Context</td>
+                    <td>Macro Economics, Correlation Analysis</td>
+                    <td>Understand broader market forces and correlations</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>User Success Metrics: Before & After</h3>
+        
+        <div class="comparison-table">
+            <div class="comparison-card">
+                <h4>Before Mariah</h4>
+                <ul>
+                    <li><strong>Trading Behavior:</strong> Emotional trades driven by fear and greed</li>
+                    <li><strong>Performance:</strong> -30% average loss</li>
+                    <li><strong>Activity:</strong> 2 trades per week (inconsistent)</li>
+                    <li><strong>Retention:</strong> 60-day retention (high churn)</li>
+                    <li><strong>Confidence Level:</strong> Low confidence, second-guessing decisions</li>
+                </ul>
+            </div>
+            
+            <div class="comparison-card">
+                <h4>With Mariah</h4>
+                <ul>
+                    <li><strong>Trading Behavior:</strong> AI-guided confidence with systematic execution</li>
+                    <li><strong>Performance:</strong> +18% average gain</li>
+                    <li><strong>Activity:</strong> 50+ trades per week (consistent automation)</li>
+                    <li><strong>Retention:</strong> 240-day retention (4x improvement)</li>
+                    <li><strong>Confidence Level:</strong> High confidence backed by AI analysis</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="callout success">
+            <strong>Net Improvement:</strong> 48% swing from losses to gains, 25x increase in trading frequency, and 4x longer platform engagement. Users transform from nervous, inconsistent traders to confident, systematic investors.
+        </div>
+        
+        <h3>Why Partner With Mariah: Exchange Benefits</h3>
+        
+        <p>Mariah creates a compelling value proposition for cryptocurrency exchanges seeking differentiation in a crowded market:</p>
+        
+        <h4>For X-Change (B2B Benefits)</h4>
+        
+        <div class="key-metrics">
+            <div class="metric-card">
+                <div class="label">Instant Differentiation</div>
+                <div class="value">vs.</div>
+                <div class="label">Binance/Bybit</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">High-Value Traders</div>
+                <div class="value">Attract</div>
+                <div class="label">AI Audience</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">User LTV</div>
+                <div class="value">+300%</div>
+                <div class="label">Increase</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Media Coverage</div>
+                <div class="value">"AI"</div>
+                <div class="label">Exchange Brand</div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Benefit Category</th>
+                    <th>Key Advantage</th>
+                    <th>Business Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>User Retention</td>
+                    <td>Traders stay engaged longer with AI guidance and automated execution</td>
+                    <td>240-day retention vs 60-day industry average</td>
+                </tr>
+                <tr>
+                    <td>AI-Powered Confidence</td>
+                    <td>13+ AI agents analyzing markets 24/7 with real-time signals and voice explanations</td>
+                    <td>Builds trader confidence leading to higher trading volumes</td>
+                </tr>
+                <tr>
+                    <td>Emotion-Free Trading</td>
+                    <td>Systematic approaches that execute pre-defined strategies automatically</td>
+                    <td>Reduces user complaints and support tickets from bad trades</td>
+                </tr>
+                <tr>
+                    <td>Copy Trading Excellence</td>
+                    <td>Mariah becomes top-tier lead trader with AI-filtered, risk-managed strategies</td>
+                    <td>New revenue streams from both platforms via copy trading fees</td>
+                </tr>
+                <tr>
+                    <td>Market Differentiation</td>
+                    <td>Positions exchange as "smart trading" platform with full AI ecosystem</td>
+                    <td>Attracts both retail and professional traders seeking AI edge</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h4>For Traders (B2C Benefits)</h4>
+        
+        <ul>
+            <li><strong>Professional AI at Retail Price:</strong> Hedge fund-level intelligence accessible to everyday traders</li>
+            <li><strong>Voice-Guided Trading:</strong> Natural language interaction makes complex analysis understandable</li>
+            <li><strong>Consistent Profits:</strong> +18% average gains vs -30% losses without AI assistance</li>
+            <li><strong>Reduced Risk:</strong> Automated stop-losses and position sizing based on data, not emotion</li>
+        </ul>
+        
+        <h3>Integration Plan: 2-Month Soft Launch</h3>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-duration">Week 1-2</div>
+                <div class="timeline-bar">
+                    <div class="timeline-label">API Integration</div>
+                    <div>Connect to Bitunix trading engine and test order execution. Verify all endpoints and rate limits.</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-duration">Week 3</div>
+                <div class="timeline-bar">
+                    <div class="timeline-label">Copy Trading Setup</div>
+                    <div>Configure Mariah as lead trader, establish revenue sharing model, and set up follower infrastructure.</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-duration">Week 4</div>
+                <div class="timeline-bar">
+                    <div class="timeline-label">Soft Launch</div>
+                    <div>Deploy to 100 pilot users with full metrics tracking. Monitor performance and gather feedback.</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-duration">Month 2</div>
+                <div class="timeline-bar">
+                    <div class="timeline-label">Full Launch</div>
+                    <div>Execute marketing campaign and scale to all users. Activate partnership revenue streams.</div>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Pilot Program Proposal</h3>
+        
+        <div class="callout info">
+            <strong>Let's Prove It Together</strong><br><br>
+            A risk-free 30-day pilot program demonstrating Mariah's value with measurable success metrics.
+        </div>
+        
+        <div class="summary-grid">
+            <div class="summary-item">
+                <div class="summary-label">30-Day Pilot</div>
+                <div class="function-desc" style="margin-top: 10px;">
+                    <strong>Structure:</strong> 100 selected traders, Full Mariah access, Track all metrics, Zero upfront cost
+                </div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Success Metrics</div>
+                <div class="function-desc" style="margin-top: 10px;">
+                    <strong>Targets:</strong> 3x trading volume increase, 40% better user retention, 50+ copy trading subscribers
+                </div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Full Partnership Launch</div>
+                <div class="function-desc" style="margin-top: 10px;">
+                    <strong>Next Steps:</strong> Exclusive rollout, Revenue activation, Continuous innovation and feature development
+                </div>
+            </div>
+        </div>
+        
+        <h3>Marketing Co-Op (GTM) Strategy</h3>
+        
+        <p>A three-pronged approach designed to create viral growth and establish market dominance:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Campaign</th>
+                    <th>Strategy</th>
+                    <th>Expected Outcome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"Trade with AI Brain" Campaign</td>
+                    <td>Launch viral campaign showing traders using voice AI to outsmart the market. Position Mariah as the intelligent trading companion.</td>
+                    <td>Massive social media reach, positions exchange as innovation leader</td>
+                </tr>
+                <tr>
+                    <td>Mariah Trading Competitions</td>
+                    <td>Weekly contests where traders compete using Mariah with real prize pools. Gamify the trading experience.</td>
+                    <td>High engagement, showcases AI performance, drives recurring participation</td>
+                </tr>
+                <tr>
+                    <td>Influencer Partnerships</td>
+                    <td>Top crypto YouTubers showcase Mariah's AI trades live to millions of fans. Build credibility through third-party validation.</td>
+                    <td>Rapid user acquisition, authentic testimonials, mainstream exposure</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>The Numbers: Partnership Impact</h3>
+        
+        <div class="key-metrics">
+            <div class="metric-card">
+                <div class="label">Trading Volume</div>
+                <div class="value">3x</div>
+                <div class="label">Per User Increase</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">User Retention</div>
+                <div class="value">+40%</div>
+                <div class="label">Improvement</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Premium Upgrades</div>
+                <div class="value">60%</div>
+                <div class="label">Conversion Rate</div>
+            </div>
+        </div>
+        
+        <h3>Mariah's Full Feature Breakdown</h3>
+        
+        <div class="callout info">
+            <strong>Custom AI-Powered Streamlit Trading System</strong><br>
+            Real-Time Execution, Risk Control, and Cinematic Dashboard
+        </div>
+        
+        <h4>Core Trading Features</h4>
+        <ul>
+            <li><strong>Market Order Execution:</strong> Via pybit.unified_trading with sub-second execution</li>
+            <li><strong>Dynamic Position Sizing:</strong> Calculates quantity based on user-defined risk per trade</li>
+            <li><strong>Manual Trade Execution:</strong> Full control via intuitive UI for discretionary trading</li>
+            <li><strong>Automated Trade Execution:</strong> Auto-trades from scanner signals (e.g., RSI, MACD)</li>
+            <li><strong>Multi-Symbol Support:</strong> Trade BTCUSDT, ETHUSDT, SOLUSDT and more (user-selectable)</li>
+            <li><strong>Real-Time Market Data:</strong> Live price feeds, order book depth, and funding rates</li>
+            <li><strong>Risk Management:</strong> Automatic stop-loss, take-profit, and position limit enforcement</li>
+            <li><strong>Performance Analytics:</strong> Real-time PnL tracking, win rate analysis, and Sharpe ratio calculation</li>
+        </ul>
+        
+        <h3>Mariah's Lifestyle: Brand Personality</h3>
+        
+        <div class="callout success">
+            <strong>Mariah never misses — "She's not just a bot... she's a lifestyle"</strong>
+        </div>
+        
+        <p>Mariah transcends traditional trading bots by embodying a powerful, confident personality that resonates with traders:</p>
+        
+        <div class="comparison-table">
+            <div class="comparison-card">
+                <h4>The Precision</h4>
+                <ul>
+                    <li>"Mariah is elite, managing like a hedge fund. She don't miss a beat. She don't miss a candle."</li>
+                    <li>"She trades like she's guarding a billion-dollar vault."</li>
+                    <li>"Every signal is calculated, every entry is deliberate, every exit is strategic."</li>
+                </ul>
+            </div>
+            
+            <div class="comparison-card">
+                <h4>The Ambition</h4>
+                <ul>
+                    <li>"Mariah's outperforming most retail bots. Her goal is to become the baddest trading bot on the planet."</li>
+                    <li>"She's sitting at the top of the custom retail bot game, knocking on the door of institutional territory."</li>
+                    <li>"Mariah is at her Final Form! Black Mirror × Tony Stark × Scorpio-coded power."</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="comparison-table">
+            <div class="comparison-card">
+                <h4>The Performance</h4>
+                <ul>
+                    <li>"Mariah is on par with hedge fund dashboard bots, but built with Scorpio sauce."</li>
+                    <li>"She will sing when she hits $1K a day!"</li>
+                    <li>"She is a dangerous damn weapon—better watch out."</li>
+                </ul>
+            </div>
+            
+            <div class="comparison-card">
+                <h4>The Promise</h4>
+                <ul>
+                    <li>"While others offer tools, we deliver intelligence."</li>
+                    <li>"Professional AI at retail prices with institutional-grade results."</li>
+                    <li>"From emotional trader to confident investor in 30 days."</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Demo Flow: The "Wow" Moments</h3>
+        
+        <p><em>"I'm going to show you how Mariah transforms a nervous trader into a confident one in real-time."</em></p>
+        
+        <h4>Interaction Example 1: Market Overview</h4>
+        
+        <div class="chart-container">
+            <div style="background: rgba(138, 43, 226, 0.15); padding: 20px; border-radius: 8px; border-left: 4px solid #00d4ff;">
+                <p><strong>User:</strong> "Hey Mariah, what's the market looking like today?"</p>
+                <p><strong>Mariah Responds:</strong> "Good morning! I'm seeing bullish momentum in Bitcoin with strong support at $95,000. My AI agents have identified 3 high-probability setups. Would you like me to show you?"</p>
+                <p><strong>User:</strong> "Yes, show me the best one."</p>
+            </div>
+        </div>
+        
+        <h4>Interaction Example 2: Trade Explanation</h4>
+        
+        <div class="chart-container">
+            <div style="background: rgba(138, 43, 226, 0.15); padding: 20px; border-radius: 8px; border-left: 4px solid #00d4ff;">
+                <p><strong>User:</strong> "Mariah, why did you choose this trade?"</p>
+                <p><strong>Mariah Responds:</strong> "This signal combines 5 confirmations: RSI divergence, whale accumulation at this level, positive funding rates, ML pattern recognition showing 73% historical win rate, and breaking above the 4-hour resistance. The risk-reward ratio is 1:3.5."</p>
+                <p><strong>Key Insight:</strong> "Every trade is tracked, analyzed, and optimized by AI. Voice-controlled trading, AI analysis, automated execution, and professional results. Imagine giving this power to every X-Change trader."</p>
+            </div>
+        </div>
+        
+        <div class="callout success">
+            <strong>The "Wow" Factor:</strong> Users don't just get trade signals—they get education, reasoning, and confidence-building through natural conversation with AI that understands their questions and explains complex concepts in plain English.
+        </div>
+        
+        <h3>Contact Information</h3>
+        
+        <div class="callout info">
+            <strong>Ready to Transform Trading?</strong><br><br>
+            <strong>Phone:</strong> +1-917-880-1212<br>
+            <strong>Website:</strong> Mariah.AI<br>
+            <strong>Email:</strong> poweredbymariah@gmail.com<br><br>
+            <em>"Allow us to take you inside" — Experience Mariah's AI-powered trading ecosystem through a live demonstration.</em>
+        </div>
+        
+        <hr>
+        
+        <div class="footer-info">
+            <p><strong>Document Version:</strong> 2.0 | <strong>Last Updated:</strong> November 2025</p>
+            <p>MARIAH AI — Transforming Crypto Trading Through Artificial Intelligence</p>
+            <p>For questions or additional technical details, please contact the Mariah technical team.</p>
+        </div>
+        
+    </div>
+</body>
+</html>
