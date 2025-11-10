@@ -4434,65 +4434,6 @@
         });
     }
     
-    // 4. USE OF FUNDS PIE CHART
-    const fundsCtx = document.getElementById('fundsChart');
-    if (fundsCtx) {
-        new Chart(fundsCtx, {
-            type: 'doughnut',
-            data: {
-                labels: [
-                    'Technology Development',
-                    'Sales & Marketing', 
-                    'Infrastructure & Operations',
-                    'Compliance & Legal',
-                    'Team Expansion'
-                ],
-                datasets: [{
-                    data: [450000, 350000, 200000, 150000, 100000],
-                    backgroundColor: [
-                        'rgba(0, 212, 255, 0.8)',
-                        'rgba(255, 20, 147, 0.8)',
-                        'rgba(138, 43, 226, 0.8)',
-                        'rgba(76, 175, 80, 0.8)',
-                        'rgba(255, 193, 7, 0.8)'
-                    ],
-                    borderColor: [
-                        'rgba(0, 212, 255, 1)',
-                        'rgba(255, 20, 147, 1)',
-                        'rgba(138, 43, 226, 1)',
-                        'rgba(76, 175, 80, 1)',
-                        'rgba(255, 193, 7, 1)'
-                    ],
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            font: { size: 13 },
-                            padding: 15,
-                            usePointStyle: true
-                        }
-                    },
-                    tooltip: {
-                        backgroundColor: 'rgba(15, 15, 30, 0.9)',
-                        callbacks: {
-                            label: function(context) {
-                                const value = context.parsed;
-                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
-                                const percentage = ((value / total) * 100).toFixed(1);
-                                return context.label + ': $' + value.toLocaleString() + ' (' + percentage + '%)';
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    }
     
     // 4. USE OF FUNDS PIE CHART
     const fundsCtx = document.getElementById('fundsChart');
