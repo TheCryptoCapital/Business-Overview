@@ -824,7 +824,7 @@
         
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -3238,11 +3238,6 @@
         
         <h3>Detailed Allocation ($1.25M)</h3>
         
-        <div style="margin: 40px 0; padding: 30px; background: rgba(138, 43, 226, 0.1); border-radius: 12px;">
-            <h3 style="text-align: center; margin-bottom: 30px;">💰 Use of Funds Distribution</h3>
-            <canvas id="fundsChart" style="max-height: 400px;"></canvas>
-        </div>
-        
         <table>
             <thead>
                 <tr>
@@ -4252,12 +4247,17 @@
     </div>
     
     <script>
-    // Chart.js Configuration - Dark Theme
-    Chart.defaults.color = '#ffffff';
-    Chart.defaults.borderColor = 'rgba(138, 43, 226, 0.3)';
-    
-    // 1. REVENUE GROWTH CHART
-    const revenueCtx = document.getElementById('revenueChart');
+    // Wait for page to fully load before initializing charts
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('🎨 Initializing Mariah charts...');
+        
+        // Chart.js Configuration - Dark Theme
+        Chart.defaults.color = '#ffffff';
+        Chart.defaults.borderColor = 'rgba(138, 43, 226, 0.3)';
+        
+        // 1. REVENUE GROWTH CHART
+        const revenueCtx = document.getElementById('revenueChart');
+        console.log('Revenue chart element:', revenueCtx);
     if (revenueCtx) {
         new Chart(revenueCtx, {
             type: 'line',
@@ -4485,6 +4485,8 @@
             }
         });
     }
+    
+    }); // End DOMContentLoaded
 
     </script>
 </body>
