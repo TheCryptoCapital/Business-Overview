@@ -704,6 +704,123 @@
         .container th {
             word-break: break-word !important;
         }
+        
+        /* PLAYFUL SOPHISTICATED ADDITIONS */
+        
+        /* Animated gradient backgrounds for callouts */
+        .callout.success {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2) 0%, rgba(40, 120, 80, 0.3) 100%);
+            animation: subtleGlow 3s ease-in-out infinite;
+        }
+        
+        .callout.info {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+            animation: subtleGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes subtleGlow {
+            0%, 100% { 
+                box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+            }
+            50% { 
+                box-shadow: 0 6px 25px rgba(138, 43, 226, 0.5);
+            }
+        }
+        
+        /* Smooth hover lift on cards */
+        .comparison-card, .metric-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .comparison-card:hover, .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(138, 43, 226, 0.4);
+        }
+        
+        /* Gradient animation on big numbers */
+        .metric-card .value {
+            background: linear-gradient(135deg, #00d4ff 0%, #8a2be2 50%, #00d4ff 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s linear infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        /* Colorful accent bars on key sections */
+        h2[id] {
+            border-left: 4px solid transparent;
+            padding-left: 20px;
+            border-image: linear-gradient(180deg, #8a2be2, #00d4ff) 1;
+            transition: all 0.3s ease;
+        }
+        
+        h2[id]:hover {
+            border-left-width: 8px;
+            padding-left: 24px;
+        }
+        
+        /* Smooth transitions on tables */
+        table tbody tr {
+            transition: all 0.3s ease;
+        }
+        
+        table tbody tr:hover {
+            background: rgba(138, 43, 226, 0.15) !important;
+            transform: scale(1.01);
+        }
+        
+        /* Subtle pulsing on important metrics */
+        .chart-container {
+            animation: subtlePulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes subtlePulse {
+            0%, 100% { 
+                box-shadow: 0 5px 20px rgba(138, 43, 226, 0.3);
+            }
+            50% { 
+                box-shadow: 0 10px 40px rgba(138, 43, 226, 0.5);
+            }
+        }
+        
+        /* Smooth link hover effects */
+        a {
+            transition: all 0.2s ease;
+        }
+        
+        a:hover {
+            color: #00d4ff;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+        
+        /* Add subtle shimmer to headers */
+        h1, h2 {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1::before, h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 8s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+        }
+        
         }
     </style>
 </head>
